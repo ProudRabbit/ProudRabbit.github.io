@@ -16,7 +16,6 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/05/hello-world/index.html">
 <meta property="og:site_name" content="ProudRabbit">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-05T06:32:35.657Z">
 <meta property="article:modified_time" content="2020-03-05T06:32:35.657Z">
 <meta property="article:author" content="路痴种花兔">
@@ -75,9 +74,11 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="/" target="_blank">技术笔记</a></li>
-			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
+			
+				<li><a href="/tags/%E5%AD%A6%E4%B9%A0/" target="_blank">学习</a></li>
+			
+				<li><a href="/archives/index.html" target="_blank">归档</a></li>
 			
 			</ul>
 		</nav>
@@ -101,9 +102,15 @@
 				
 					<a class="github" href="https://github.com/ProudRabbit" title="GitHub" target="_blank"><i class="icon-github"></i></a>
 				
-					<a class="gitee" href="https://gitee.com/proudrabbit/dashboard" title="gitee" target="_blank"><i class="icon-gitee"></i></a>
+					<a class="gitee" href="https://gitee.com/proudrabbit/dashboard" title="码云" target="_blank"><i class="icon-gitee"></i></a>
 				
-					<a class="cnblog" href="https://blog.csdn.net/qq_37284607" title="cnblog" target="_blank"><i class="icon-cnblog"></i></a>
+					<a class="cnblog" href="https://blog.csdn.net/qq_37284607" title="博客园" target="_blank"><i class="icon-cnblog"></i></a>
+				
+					<a class="qq" href="/img/qrcode.jpg" title="QQ" target="_blank"><i class="icon-qq"></i></a>
+				
+					<a class="weixin" href="/img/wxcode.png" title="微信" target="_blank"><i class="icon-weixin"></i></a>
+				
+					<a class="mail" href="mailto:yuh_feng@163.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
 				
 			</div>
 		
@@ -151,6 +158,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -158,9 +167,15 @@
 					
 						<a class="github" target="_blank" href="https://github.com/ProudRabbit" title="GitHub"><i class="icon-github"></i></a>
 			        
-						<a class="gitee" target="_blank" href="https://gitee.com/proudrabbit/dashboard" title="gitee"><i class="icon-gitee"></i></a>
+						<a class="gitee" target="_blank" href="https://gitee.com/proudrabbit/dashboard" title="码云"><i class="icon-gitee"></i></a>
 			        
-						<a class="cnblog" target="_blank" href="https://blog.csdn.net/qq_37284607" title="cnblog"><i class="icon-cnblog"></i></a>
+						<a class="cnblog" target="_blank" href="https://blog.csdn.net/qq_37284607" title="博客园"><i class="icon-cnblog"></i></a>
+			        
+						<a class="qq" target="_blank" href="/img/qrcode.jpg" title="QQ"><i class="icon-qq"></i></a>
+			        
+						<a class="weixin" target="_blank" href="/img/wxcode.png" title="微信"><i class="icon-weixin"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:yuh_feng@163.com" title="NULL"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -169,11 +184,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">技术笔记</a></li>
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></li>
+		        
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -189,7 +206,9 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            
+
+<article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -337,9 +356,9 @@
           <a class="weibo share-sns" href="javascript:;" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
             <i class="icon icon-weixin"></i>
-          </a> -->
+          </a>
           <a class="qq share-sns" href="javascript:;" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
@@ -368,7 +387,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/05/hello-world/" alt="微信分享二维码"> -->
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https:/ProudRabbit.gitee.io/2020/03/05/hello-world/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -394,6 +413,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -583,15 +615,6 @@
     	<section class="tools-section tools-section-friends" q-show="friends">
   		
         <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title" >
-                
-                  <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
-                
-                技术笔记
-              </a>
-            </li>
           
             <li class="search-li">
               <a href="https://github.com/ProudRabbit" target="_blank" class="search-title" >
