@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-05T06:32:35.657Z</updated>
+  <updated>2020-03-07T06:15:37.667Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/03/05/hello-world/"/>
-    <id>http://yoursite.com/2020/03/05/hello-world/</id>
-    <published>2020-03-05T06:32:35.657Z</published>
-    <updated>2020-03-05T06:32:35.657Z</updated>
+    <title>我的第一篇博客</title>
+    <link href="http://yoursite.com/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-03-07T05:24:19.000Z</published>
+    <updated>2020-03-07T06:15:37.667Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://imgchr.com/i/3XKtlF" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/03/07/3XKtlF.jpg" alt="3XKtlF.jpg"></a></p><a id="more"></a><h1 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h1><p>​    经过两天的折腾，终于把个人博客在Github和Gitee上搭建成功了，现在超开心的说o(<em>￣▽￣</em>)ブ。</p><hr><h2 id="写这篇博客的目的"><a href="#写这篇博客的目的" class="headerlink" title="写这篇博客的目的"></a>写这篇博客的目的</h2><p>​    因为我有写笔记的习惯，以前笔记都是在OneNote上写的，现在逐渐从Windows下转移到Linux，但是Linux下没有OneNote，以及OneNote同步太慢，遂萌生了搭建个人博客的想法。后面我会把自己搭建博客的经验分享出来。</p><hr><p>感谢yilia-puls主题的博主给予的帮助。</p><p><strong>仅以此博客记录我第一次搭建个人博客。</strong></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/3XKtlF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/07/3XKtlF.jpg&quot; alt=&quot;3XKtlF.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
     
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
