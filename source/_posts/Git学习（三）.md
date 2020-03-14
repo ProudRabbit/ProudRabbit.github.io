@@ -33,8 +33,14 @@ git reflog      		//查看历史记录的版本号id
 
 git checkout -- XX  	//把XX文件在工作区的修改全部撤销。
 
-git rm XX         		//删除XX文件
+git rm XX         		//删除XX文件,知识删除工作目录和暂存区的文件，也就是取消跟踪
 
+git rm --f XX			//删除XX文件的跟踪，并且删除本地文件，不写文件名默认删除所有文件
+    
+git rm --cached XX		//删除XX的跟踪，并保留在本地。--cached指的是暂存区，不写文件名为丢弃所有文件
+
+git mu 旧文件名 新文件名   //重命名文件
+    
 ```
 
 
