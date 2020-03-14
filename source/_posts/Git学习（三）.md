@@ -13,28 +13,36 @@ tags: [学习笔记, Git]
 # 一、本地操作命令
 
 ```c
-git init 				//把当前的目录变成可以管理的git仓库，生成隐藏.git文件
+git init 						//把当前的目录变成可以管理的git仓库，生成隐藏.git文件
 	
-git add XX  			//把xx文件添加到暂存区去。
+git add XX  					//把xx文件添加到暂存区去。
 
-git commit –m “XX”  	//提交文件 –m 后面的是注释。
+git commit –m “XX”  			//提交文件 –m 后面的是注释。
+    
+git commit --amend -m "XX"		//更正最近的一次提交
+    
+git status   					//查看仓库状态
 
-git status   			//查看仓库状态
+git diff  XX     				//查看XX文件修改了那些内容
 
-git diff  XX     		//查看XX文件修改了那些内容
+git log        					//查看历史记录
 
-git log        			//查看历史记录
+git reset --hard HEAD^  		//或者 git reset  –hard HEAD~数字 回退到上几个版本，不写数字默认为一。
 
-git reset --hard HEAD^  //或者 git reset  –hard HEAD~数字 回退到上几个版本，不写数字默认为一。
+git reset --hard 版本ID		   //版本号为使用git log查询到的黄色字符串
 
-git reset --hard 版本ID  //版本号为使用git log查询到的黄色字符串
+git reflog      				//查看历史记录的版本号id
 
-git reflog      		//查看历史记录的版本号id
+git checkout -- XX  			//把XX文件在工作区的修改全部撤销。
 
-git checkout -- XX  	//把XX文件在工作区的修改全部撤销。
+git rm XX         				//删除XX文件,知识删除工作目录和暂存区的文件，也就是取消跟踪
 
-git rm XX         		//删除XX文件
+git rm --f XX					//删除XX文件的跟踪，并且删除本地文件，不写文件名默认删除所有文件
+    
+git rm --cached XX				//删除XX的跟踪，并保留在本地。--cached指的是暂存区，不写文件名为丢弃所有文件
 
+git mu 旧文件名 新文件名   		   //重命名文件
+    
 ```
 
 
