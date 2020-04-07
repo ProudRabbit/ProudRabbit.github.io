@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。">
+  <meta name="description" content="最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。PicGo-Core已经解决SMMS V1 API不能上传的问题，直接点击下载或更新，更新下PicGo-Core就行了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Typora+PicGo-core+SMMS图床踩坑记">
 <meta property="og:url" content="http://yoursite.com/2020/03/10/Typora-PicGo-core-SMMS%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ProudRabbit">
-<meta property="og:description" content="最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。">
+<meta property="og:description" content="最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。PicGo-Core已经解决SMMS V1 API不能上传的问题，直接点击下载或更新，更新下PicGo-Core就行了。">
 <meta property="og:image" content="https://i.loli.net/2020/03/10/bM1r2gzNpZPCILi.png">
 <meta property="og:image" content="https://i.loli.net/2020/03/10/soWZrdVcDKNCft1.png">
 <meta property="og:image" content="https://i.loli.net/2020/03/10/vIBqtJfCD5kyrGd.png">
 <meta property="article:published_time" content="2020-03-10T02:40:22.000Z">
-<meta property="article:modified_time" content="2020-03-14T09:32:59.794Z">
+<meta property="article:modified_time" content="2020-04-06T23:36:09.128Z">
 <meta property="article:author" content="路痴种花兔">
 <meta property="article:tag" content="随笔">
 <meta property="article:tag" content="Typora">
@@ -248,7 +248,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">566字</span>
+      <span class="post-count">599字</span>
     </span>
   </span>
 
@@ -268,7 +268,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^<strong>LzSkyline</strong>]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。</p>
+    <p>最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^<strong>LzSkyline</strong>]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。<strong>PicGo-Core已经解决SMMS V1 API不能上传的问题，直接点击下载或更新，更新下PicGo-Core就行了。</strong></p>
 <a id="more"></a>
 
 <hr>
@@ -282,7 +282,7 @@
 <hr>
 <p><strong>坑二：Windows下使用Git Bash不能安装，需要使用 CMD</strong></p>
 <p>打开CMD，输入</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CD C:\Users\你自己的用户名\AppData\Roaming\Typora\picgo</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CD C:\Users\你自己的用户名\AppData\Roaming\Typora\picgo\win64</span><br></pre></td></tr></table></figure>
 
 <p>进入picgo的根目录，然后再输入</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\picgo.exe install smms-user</span><br></pre></td></tr></table></figure>
@@ -630,14 +630,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -647,6 +639,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
