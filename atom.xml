@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-14T09:38:26.055Z</updated>
+  <updated>2020-04-19T05:55:15.456Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,23 +21,23 @@
     <link href="http://yoursite.com/2020/03/14/git-commit-amend%E8%B8%A9%E5%9D%91/"/>
     <id>http://yoursite.com/2020/03/14/git-commit-amend%E8%B8%A9%E5%9D%91/</id>
     <published>2020-03-14T09:16:26.000Z</published>
-    <updated>2020-03-14T09:38:26.055Z</updated>
+    <updated>2020-04-19T05:55:15.456Z</updated>
     
-    <content type="html"><![CDATA[<p>因为改动比较小，所以我不想重建一个commit，于是我是用了<code>git commit --amend</code>命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用–amend修改commit后，git push时一定要使用 –force-with-lease 参数来强制推送，否则就会报错。</p><a id="more"></a><h1 id="这是我自己推送失败的例子"><a href="#这是我自己推送失败的例子" class="headerlink" title="这是我自己推送失败的例子"></a>这是我自己推送失败的例子</h1><p><img src="https://i.loli.net/2020/03/14/oTx6a7ZyFP23gmE.png" alt="image-20200314172358176"></p><h1 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h1><h2 id="一、第一种"><a href="#一、第一种" class="headerlink" title="一、第一种"></a>一、第一种</h2><p>使用后<code>git commit --amend -m &quot;修改Git学习(三)指令&quot;</code></p><p>==<strong>注意：-m “这里的内容和要追加的commit相同即可”，当然你也可以修改</strong>==</p><p>推送时使用``git push –force-with-lease gitee Backup`命令。</p><p>百度到的教程来自于CSDN博主 <a href="https://blog.csdn.net/weixin_38669561/article/details/103385514" target="_blank" rel="noopener">无色云</a></p><h2 id="二、第二种"><a href="#二、第二种" class="headerlink" title="二、第二种"></a>二、第二种</h2><p><strong>这种用处不大，不建议使用，<del>因为无异于脱裤子放屁</del>。</strong></p><p>根据提示先从远程仓库git pull下来，然后修改冲突的文件后再git add  git commit最后再git push</p>]]></content>
+    <content type="html"><![CDATA[<p>因为改动比较小，所以我不想重建一个commit，于是我是用了<code>git commit --amend</code>命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用<code>--amend</code>修改commit后，<code>git push</code>时一定要使用 <code>--force-with-lease</code> 参数来强制推送，否则就会报错。</p><a id="more"></a><h1 id="这是我自己推送失败的例子"><a href="#这是我自己推送失败的例子" class="headerlink" title="这是我自己推送失败的例子"></a>这是我自己推送失败的例子</h1><p><img src="https://i.loli.net/2020/03/14/oTx6a7ZyFP23gmE.png" alt="image-20200314172358176"></p><h1 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h1><h2 id="一、第一种"><a href="#一、第一种" class="headerlink" title="一、第一种"></a>一、第一种</h2><p>使用后<code>git commit --amend -m &quot;修改Git学习(三)指令&quot;</code></p><p>==<strong>注意：-m “这里的内容和要追加的commit相同即可”，当然你也可以修改</strong>==</p><p>推送时使用<code>git push --force-with-lease gitee Backup</code>命令。</p><p>百度到的教程来自于CSDN博主 <a href="https://blog.csdn.net/weixin_38669561/article/details/103385514" target="_blank" rel="noopener">无色云</a></p><h2 id="二、第二种"><a href="#二、第二种" class="headerlink" title="二、第二种"></a>二、第二种</h2><p><strong>这种用处不大，不建议使用，<del>因为无异于脱裤子放屁</del>。</strong></p><p>根据提示先从远程仓库git pull下来，然后修改冲突的文件后再git add  git commit最后再git push</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;因为改动比较小，所以我不想重建一个commit，于是我是用了&lt;code&gt;git commit --amend&lt;/code&gt;命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用–amend修改commit后，git push时一定要使用 –force-with-lease 参数来强制推送，否则就会报错。&lt;/p&gt;
+      &lt;p&gt;因为改动比较小，所以我不想重建一个commit，于是我是用了&lt;code&gt;git commit --amend&lt;/code&gt;命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用&lt;code&gt;--amend&lt;/code&gt;修改commit后，&lt;code&gt;git push&lt;/code&gt;时一定要使用 &lt;code&gt;--force-with-lease&lt;/code&gt; 参数来强制推送，否则就会报错。&lt;/p&gt;
     
     </summary>
     
     
     
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="Bug" scheme="http://yoursite.com/tags/Bug/"/>
-    
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -104,9 +104,9 @@
     
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -127,9 +127,9 @@
     
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -152,9 +152,9 @@
     
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
