@@ -4,7 +4,7 @@ date: 2020-03-14 17:16:26
 tags: [Git, 随笔, Bug]
 ---
 
-因为改动比较小，所以我不想重建一个commit，于是我是用了`git commit --amend`命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用--amend修改commit后，git push时一定要使用 --force-with-lease 参数来强制推送，否则就会报错。
+因为改动比较小，所以我不想重建一个commit，于是我是用了`git commit --amend`命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用`--amend`修改commit后，`git push`时一定要使用 `--force-with-lease` 参数来强制推送，否则就会报错。
 
 <!--more-->
 
@@ -16,11 +16,11 @@ tags: [Git, 随笔, Bug]
 
 ## 一、第一种
 
-使用后``git commit --amend -m "修改Git学习(三)指令"``
+使用后`git commit --amend -m "修改Git学习(三)指令"`
 
 ==**注意：-m “这里的内容和要追加的commit相同即可”，当然你也可以修改**==
 
-推送时使用``git push --force-with-lease gitee Backup`命令。
+推送时使用`git push --force-with-lease gitee Backup`命令。
 
 
 
