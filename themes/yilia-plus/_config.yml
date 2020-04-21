@@ -8,15 +8,15 @@ menu:
 # subNav-子导航
 subNav:
   github: "https://github.com/ProudRabbit"
-  gitee: "https://gitee.com/proudrabbit/dashboard" # 码云
+  gitee: "https://gitee.com/proudrabbit" # 码云
   cnblog: "https://blog.csdn.net/qq_37284607"
   #blog: "#"
   #csdn: "#"
   #jianshu: "#" #简书
   #rss: "#"
   #zhihu: "#"
-  qq: "img/qrcode.jpg"
-  weixin: "img/wxcode.png"
+  #qq: "img/qrcode.jpg"
+  #weixin: "img/wxcode.png"
   #weibo: "#"
   #douban: "#"
   #segmentfault: "#"
@@ -62,7 +62,7 @@ open_in_new:
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 2
+reward_type: 0
 # 打赏wording
 reward_wording: '谢谢你请我吃糖果'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
@@ -215,23 +215,23 @@ activate_power_mode:
 
 # 飘雪特效
 # https://github.com/MlgmXyysd/snow.js
-snow: false
+snow: true
 
 # 看板娘动态模型插件
 ## https://github.com/JoeyBling/live2d-widget.js
 live2d:
   # (关闭请设置为false)
-  enable: false
+  enable: true
   # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
-  model: hibiki
+  model: hijiki     # 喜欢的几个模型 izumi hijiki haru/02 wanko
   display:
     position: right # 显示位置：left/right(default: 'right')
     width: 145  # 模型的长度(default: 150)
     height: 315 # 模型的高度(default: 300)
     hOffset: 50 # 水平偏移(default: 0)
-    #vOffset: -20 # 垂直偏移(default: -20)
+    vOffset: -20 # 垂直偏移(default: -20)
   mobile:
-    show: false # 是否在移动设备上显示(default: true)
+    show: true # 是否在移动设备上显示(default: true)
     scale: 0.6 # 移动设备上的缩放(default: 0.5)
   react:
     opacity: 0.8 # 模型透明度(default: 0.7)
