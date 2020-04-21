@@ -98,13 +98,9 @@
 				
 					<a class="github" href="https://github.com/ProudRabbit" title="GitHub" target="_blank"><i class="icon-github"></i></a>
 				
-					<a class="gitee" href="https://gitee.com/proudrabbit/dashboard" title="码云" target="_blank"><i class="icon-gitee"></i></a>
+					<a class="gitee" href="https://gitee.com/proudrabbit" title="码云" target="_blank"><i class="icon-gitee"></i></a>
 				
 					<a class="cnblog" href="https://blog.csdn.net/qq_37284607" title="博客园" target="_blank"><i class="icon-cnblog"></i></a>
-				
-					<a class="qq" href="/img/qrcode.jpg" title="QQ" target="_blank"><i class="icon-qq"></i></a>
-				
-					<a class="weixin" href="/img/wxcode.png" title="微信" target="_blank"><i class="icon-weixin"></i></a>
 				
 					<a class="mail" href="mailto:yuh_feng@163.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
 				
@@ -163,13 +159,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/ProudRabbit" title="GitHub"><i class="icon-github"></i></a>
 			        
-						<a class="gitee" target="_blank" href="https://gitee.com/proudrabbit/dashboard" title="码云"><i class="icon-gitee"></i></a>
+						<a class="gitee" target="_blank" href="https://gitee.com/proudrabbit" title="码云"><i class="icon-gitee"></i></a>
 			        
 						<a class="cnblog" target="_blank" href="https://blog.csdn.net/qq_37284607" title="博客园"><i class="icon-cnblog"></i></a>
-			        
-						<a class="qq" target="_blank" href="/img/qrcode.jpg" title="QQ"><i class="icon-qq"></i></a>
-			        
-						<a class="weixin" target="_blank" href="/img/wxcode.png" title="微信"><i class="icon-weixin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:yuh_feng@163.com" title="NULL"><i class="icon-mail"></i></a>
 			        
@@ -725,6 +717,66 @@
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
   
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hijiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+       vOffset: -20 
+    },
+    mobile: {
+      
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
+  
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
