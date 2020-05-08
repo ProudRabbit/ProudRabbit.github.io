@@ -76,7 +76,7 @@ toc: 2
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
 toc_hide_index: true
 # 目录为空时的提示
-toc_empty_wording: '目录，不存在的…'
+toc_empty_wording: '目录，那是什么东西◔ ‸◔？'
 
 # 是否有快速回到顶部的按钮
 top: true
@@ -215,7 +215,7 @@ activate_power_mode:
 
 # 飘雪特效
 # https://github.com/MlgmXyysd/snow.js
-snow: true
+snow: false
 
 # 看板娘动态模型插件
 ## https://github.com/JoeyBling/live2d-widget.js
@@ -231,7 +231,7 @@ live2d:
     hOffset: 50 # 水平偏移(default: 0)
     vOffset: -20 # 垂直偏移(default: -20)
   mobile:
-    show: true # 是否在移动设备上显示(default: true)
+    show: false # 是否在移动设备上显示(default: true)
     scale: 0.6 # 移动设备上的缩放(default: 0.5)
   react:
     opacity: 0.8 # 模型透明度(default: 0.7)
