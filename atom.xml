@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-19T05:55:15.456Z</updated>
+  <updated>2020-05-08T13:11:00.075Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word中如何找回取消保存的文档内容</title>
+    <link href="http://yoursite.com/2020/05/08/Word%E4%B8%AD%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E5%8F%96%E6%B6%88%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9/"/>
+    <id>http://yoursite.com/2020/05/08/Word%E4%B8%AD%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E5%8F%96%E6%B6%88%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9/</id>
+    <published>2020-05-08T12:37:27.000Z</published>
+    <updated>2020-05-08T13:11:00.075Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于如何找回Word中修改后却点了取消保存的内容"><a href="#关于如何找回Word中修改后却点了取消保存的内容" class="headerlink" title="关于如何找回Word中修改后却点了取消保存的内容"></a>关于如何找回Word中修改后却点了取消保存的内容</h1><p><strong>首先重要的事情说三遍，<code>Ctrl+S</code>勤按,<code>Ctrl+S</code>勤按,<code>Ctrl+S</code>勤按</strong>，这毕竟只是一个补救办法，还是会丢失一点内容的。  如果文件比较重要，建议同时使用 <code>Git</code> 进行跟踪。</p><p>以下是解决办法。</p><a id="more"></a>  <p>因为word有自动备份功能，所以可以找回未保存的文档内容，<strong><em>找回上一次自动保存的内容</em></strong>  </p><p>首先打开Word，然后点击文件－＞信息－＞管理文档－＞恢复未保存的文档<br><img src="https://i.loli.net/2020/05/08/Ic2ZlzVsRgANBb4.png" alt="image-20200508205246059"></p><p>然后会弹出对话框，让你寻找需要恢复的<code>.asd</code>文件，然后选择和你未保存的同名文件点击确定即可。<em>我这里因为恢复过了，所以没有文件</em></p><p><img src="https://i.loli.net/2020/05/08/ic36OAEeyzkgqfo.png" alt="批注 2020-05-08 210127"></p><p><strong>PS：如果该目录下找不到文件的话，请打开选项 -&gt; 保存 下的文档位置寻找<code>.asd</code>文件。注意，该选项上的功能如果没有勾选上的话，也是不能找回的。</strong><br><img src="https://i.loli.net/2020/05/08/IMcw6SYV7gziE3s.png" alt="批注 2020-05-08 210646"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;关于如何找回Word中修改后却点了取消保存的内容&quot;&gt;&lt;a href=&quot;#关于如何找回Word中修改后却点了取消保存的内容&quot; class=&quot;headerlink&quot; title=&quot;关于如何找回Word中修改后却点了取消保存的内容&quot;&gt;&lt;/a&gt;关于如何找回Word中修改后却点了取消保存的内容&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;首先重要的事情说三遍，&lt;code&gt;Ctrl+S&lt;/code&gt;勤按,&lt;code&gt;Ctrl+S&lt;/code&gt;勤按,&lt;code&gt;Ctrl+S&lt;/code&gt;勤按&lt;/strong&gt;，这毕竟只是一个补救办法，还是会丢失一点内容的。  如果文件比较重要，建议同时使用 &lt;code&gt;Git&lt;/code&gt; 进行跟踪。&lt;/p&gt;
+&lt;p&gt;以下是解决办法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>git commit --amend</title>
@@ -33,11 +55,11 @@
     
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="Bug" scheme="http://yoursite.com/tags/Bug/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
