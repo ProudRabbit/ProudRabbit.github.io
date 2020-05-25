@@ -48,6 +48,22 @@
   
   
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
 
   
 
@@ -677,7 +693,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>C/C++开发、嵌入式开发、<br>开源爱好者、Linux<br><br>联系QQ:1650325981<br><br>依然是只小菜鸡<br><br>刚开始学习搭建个人博客<br><br>希望大佬多多指教<br><br>谢谢大家o(*￣▽￣*)ブ</div>
+  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>C/C++开发、嵌入式开发、<br>开源爱好者、Linux爱好者、<br><br>联系QQ:1650325981<br><br>依然是只小菜鸡<br><br>刚开始学习搭建个人博客<br><br>希望大佬多多指教<br><br>谢谢大家o(*￣▽￣*)ブ</div>
   	  	
     	</section>
     
@@ -815,6 +831,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
