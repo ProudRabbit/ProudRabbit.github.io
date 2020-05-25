@@ -55,11 +55,11 @@
     
     
     
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="Bug" scheme="http://yoursite.com/tags/Bug/"/>
-    
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   

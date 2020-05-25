@@ -6,25 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>git commit --amend | ProudRabbit</title>
+  <title>ProudRabbit</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="因为改动比较小，所以我不想重建一个commit，于是我是用了git commit --amend命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用--amend修改commit后，git push时一定要使用 --force-with-lease 参数来强制推送，否则就会报错。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git commit --amend">
-<meta property="og:url" content="http://yoursite.com/2020/03/14/git-commit-amend%E8%B8%A9%E5%9D%91/index.html">
+  <meta name="description" content="6QhMQOuAx1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ProudRabbit">
+<meta property="og:url" content="http://yoursite.com/baidu_verify_6QhMQOuAx1.html">
 <meta property="og:site_name" content="ProudRabbit">
-<meta property="og:description" content="因为改动比较小，所以我不想重建一个commit，于是我是用了git commit --amend命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用--amend修改commit后，git push时一定要使用 --force-with-lease 参数来强制推送，否则就会报错。">
-<meta property="og:image" content="https://i.loli.net/2020/03/14/oTx6a7ZyFP23gmE.png">
-<meta property="article:published_time" content="2020-03-14T09:16:26.000Z">
-<meta property="article:modified_time" content="2020-04-19T05:55:15.456Z">
+<meta property="og:description" content="6QhMQOuAx1">
+<meta property="article:published_time" content="2020-05-25T10:53:22.028Z">
+<meta property="article:modified_time" content="2020-05-25T10:53:22.028Z">
 <meta property="article:author" content="路痴种花兔">
-<meta property="article:tag" content="Git">
-<meta property="article:tag" content="随笔">
-<meta property="article:tag" content="Bug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/03/14/oTx6a7ZyFP23gmE.png">
   
     <link rel="alternative" href="/atom.xml" title="ProudRabbit" type="application/atom+xml">
   
@@ -209,72 +204,12 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-<article id="post-git-commit-amend踩坑" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-  
-  
-    <h1 class="article-title" itemprop="name">
-      git commit --amend
-    </h1>
-  
-
-
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
-<a href="/2020/03/14/git-commit-amend%E8%B8%A9%E5%9D%91/" class="archive-article-date">
-        <time datetime="2020-03-14T09:16:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-14</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">253字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
   <div class="article-entry" itemprop="articleBody">
     
-    <p>因为改动比较小，所以我不想重建一个commit，于是我是用了<code>git commit --amend</code>命令,由于之前已经将该commit推送到远程仓库，导致修改后推送失败。百度后发现如果你的commit已经push到了远程仓库，那么使用<code>--amend</code>修改commit后，<code>git push</code>时一定要使用 <code>--force-with-lease</code> 参数来强制推送，否则就会报错。</p>
-<a id="more"></a>
-
-<h1 id="这是我自己推送失败的例子"><a href="#这是我自己推送失败的例子" class="headerlink" title="这是我自己推送失败的例子"></a>这是我自己推送失败的例子</h1><p><img src="https://i.loli.net/2020/03/14/oTx6a7ZyFP23gmE.png" alt="image-20200314172358176"></p>
-<h1 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h1><h2 id="一、第一种"><a href="#一、第一种" class="headerlink" title="一、第一种"></a>一、第一种</h2><p>使用后<code>git commit --amend -m &quot;修改Git学习(三)指令&quot;</code></p>
-<p>==<strong>注意：-m “这里的内容和要追加的commit相同即可”，当然你也可以修改</strong>==</p>
-<p>推送时使用<code>git push --force-with-lease gitee Backup</code>命令。</p>
-<p>百度到的教程来自于CSDN博主 <a href="https://blog.csdn.net/weixin_38669561/article/details/103385514" target="_blank" rel="noopener">无色云</a></p>
-<h2 id="二、第二种"><a href="#二、第二种" class="headerlink" title="二、第二种"></a>二、第二种</h2><p><strong>这种用处不大，不建议使用，<del>因为无异于脱裤子放屁</del>。</strong></p>
-<p>根据提示先从远程仓库git pull下来，然后修改冲突的文件后再git add  git commit最后再git push</p>
-
+    6QhMQOuAx1
     
 
     
@@ -288,7 +223,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2020/03/14/git-commit-amend踩坑/" title="git commit --amend" target="_blank">http://yoursite.com/2020/03/14/git-commit-amend踩坑/</a>
+          <a href="http://yoursite.com/baidu_verify_6QhMQOuAx1.html" title="" target="_blank">http://yoursite.com/baidu_verify_6QhMQOuAx1.html</a>
         </li>
         
         <li>
@@ -305,25 +240,6 @@
   <div class="article-info article-info-index">
     
     
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
     
 
     
@@ -374,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https:/ProudRabbit.gitee.io/2020/03/14/git-commit-amend%E8%B8%A9%E5%9D%91/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https:/ProudRabbit.gitee.io/baidu_verify_6QhMQOuAx1.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -386,25 +302,6 @@
   </div>
 </article>
 
-
-<nav id="article-nav">
-  
-    <a href="/2020/05/08/Word%E4%B8%AD%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E5%8F%96%E6%B6%88%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Word中如何找回取消保存的文档内容
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/03/13/Visio%E7%BB%98%E5%9B%BE%E6%80%8E%E4%B9%88%E5%AF%B9%E9%BD%90%E8%BF%9E%E6%8E%A5%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Visio绘图怎么对齐连接点</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
 
 
 <aside class="wrap-side-operation">
@@ -427,7 +324,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#这是我自己推送失败的例子"><span class="toc-number">1.</span> <span class="toc-text">这是我自己推送失败的例子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方式"><span class="toc-number">2.</span> <span class="toc-text">解决方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、第一种"><span class="toc-number">2.1.</span> <span class="toc-text">一、第一种</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、第二种"><span class="toc-number">2.2.</span> <span class="toc-text">二、第二种</span></a></li></ol></li></ol>
+                    目录，那是什么东西◔ ‸◔？
                     </div>
                 </span>
             </div>
@@ -487,7 +384,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
