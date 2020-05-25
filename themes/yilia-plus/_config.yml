@@ -153,11 +153,11 @@ music:
 clickLove:
   # (关闭请设置为false)
   enable: true
-
+  
 # GitHub Ribbons(https://github.blog/2008-12-19-github-ribbons/)
-github: false
+github: 
   # (关闭请设置为false)
-  #url: https://github.com/JoeyBling/hexo-theme-yilia-plus
+  url: https://github.com/ProudRabbit
 
 # 页脚 Litten(此配置项已弃用)
 # 帮助我们让更多人可以更方便使用Hexo，请尽量不要修改此主题配置
@@ -165,7 +165,7 @@ pageFooter:
   litten: GitHub:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">hexo-theme-yilia-plus</a>
 
 # 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
-baidu_push: false
+baidu_push: true
 
 # 版权声明
 # 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
@@ -215,7 +215,8 @@ activate_power_mode:
 
 # 飘雪特效
 # https://github.com/MlgmXyysd/snow.js
-snow: false
+snow: true
+
 
 # 看板娘动态模型插件
 ## https://github.com/JoeyBling/live2d-widget.js
@@ -283,4 +284,4 @@ friends:
     url: https://blog.csdn.net/qq_37284607
 
 # 关于我
-aboutme: 主要涉及技术：<br>C/C++开发、嵌入式开发、<br>开源爱好者、Linux<br><br>联系QQ:1650325981<br><br>依然是只小菜鸡<br><br>刚开始学习搭建个人博客<br><br>希望大佬多多指教<br><br>谢谢大家o(*￣▽￣*)ブ
+aboutme: 主要涉及技术：<br>C/C++开发、嵌入式开发、<br>开源爱好者、Linux爱好者、<br><br>联系QQ:1650325981<br><br>依然是只小菜鸡<br><br>刚开始学习搭建个人博客<br><br>希望大佬多多指教<br><br>谢谢大家o(*￣▽￣*)ブ
