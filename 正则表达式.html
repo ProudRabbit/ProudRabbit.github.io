@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://proudrabbit.gitee.io">
-  <title>Git学习（三） | ProudRabbit</title>
+  <title>正则表达式 | ProudRabbit</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="指令篇​    以下是我自己整理的常用Git命令。分为本地操作命令，远程仓库相关命令，分支操作命令，保护现场操作命令。">
+  <meta name="description" content="常用的正则表达式字符集，以及正则表达式中的贪婪匹配和非贪婪匹配。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git学习（三）">
-<meta property="og:url" content="https://proudrabbit.gitee.io/2020/03/09/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://proudrabbit.gitee.io/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html">
 <meta property="og:site_name" content="ProudRabbit">
-<meta property="og:description" content="指令篇​    以下是我自己整理的常用Git命令。分为本地操作命令，远程仓库相关命令，分支操作命令，保护现场操作命令。">
-<meta property="article:published_time" content="2020-03-09T04:17:37.000Z">
-<meta property="article:modified_time" content="2020-03-14T09:05:47.085Z">
+<meta property="og:description" content="常用的正则表达式字符集，以及正则表达式中的贪婪匹配和非贪婪匹配。">
+<meta property="article:published_time" content="2020-06-20T14:21:00.000Z">
+<meta property="article:modified_time" content="2020-06-20T14:58:07.360Z">
 <meta property="article:author" content="路痴的兔子">
 <meta property="article:tag" content="学习笔记">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="正则表达式">
+<meta property="article:tag" content="RE">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="ProudRabbit" type="application/atom+xml">
@@ -228,14 +229,14 @@
           <div id="js-content" class="content-ll">
             
 
-<article id="post-Git学习（三）" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Git学习（三）
+      正则表达式
     </h1>
   
 
@@ -247,8 +248,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/03/09/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-        <time datetime="2020-03-09T04:17:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
+<a href="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html" class="archive-article-date">
+        <time datetime="2020-06-20T14:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-20</time>
 </a>
 
   
@@ -261,7 +262,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">814字</span>
+      <span class="post-count">811字</span>
     </span>
   </span>
 
@@ -281,22 +282,121 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="指令篇"><a href="#指令篇" class="headerlink" title="指令篇"></a>指令篇</h1><p>​    以下是我自己整理的常用Git命令。分为本地操作命令，远程仓库相关命令，分支操作命令，保护现场操作命令。</p>
+    <p>常用的正则表达式字符集，以及正则表达式中的贪婪匹配和非贪婪匹配。</p>
 <a id="more"></a>
 
-<h1 id="一、本地操作命令"><a href="#一、本地操作命令" class="headerlink" title="一、本地操作命令"></a>一、本地操作命令</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">git init 						<span class="comment">//把当前的目录变成可以管理的git仓库，生成隐藏.git文件</span></span><br><span class="line">	</span><br><span class="line">git add XX  					<span class="comment">//把xx文件添加到暂存区去。</span></span><br><span class="line"></span><br><span class="line">git commit –m “XX”  			<span class="comment">//提交文件 –m 后面的是注释。</span></span><br><span class="line">    </span><br><span class="line">git commit --amend -m <span class="string">"XX"</span>		<span class="comment">//更正最近的一次提交</span></span><br><span class="line">    </span><br><span class="line">git status   					<span class="comment">//查看仓库状态</span></span><br><span class="line"></span><br><span class="line">git diff  XX     				<span class="comment">//查看XX文件修改了那些内容</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span>        					<span class="comment">//查看历史记录</span></span><br><span class="line"></span><br><span class="line">git reset --hard HEAD^  		<span class="comment">//或者 git reset  –hard HEAD~数字 回退到上几个版本，不写数字默认为一。</span></span><br><span class="line"></span><br><span class="line">git reset --hard 版本ID		   <span class="comment">//版本号为使用git log查询到的黄色字符串</span></span><br><span class="line"></span><br><span class="line">git reflog      				<span class="comment">//查看历史记录的版本号id</span></span><br><span class="line"></span><br><span class="line">git checkout -- XX  			<span class="comment">//把XX文件在工作区的修改全部撤销。</span></span><br><span class="line"></span><br><span class="line">git rm XX         				<span class="comment">//删除XX文件,知识删除工作目录和暂存区的文件，也就是取消跟踪</span></span><br><span class="line"></span><br><span class="line">git rm --f XX					<span class="comment">//删除XX文件的跟踪，并且删除本地文件，不写文件名默认删除所有文件</span></span><br><span class="line">    </span><br><span class="line">git rm --cached XX				<span class="comment">//删除XX的跟踪，并保留在本地。--cached指的是暂存区，不写文件名为丢弃所有文件</span></span><br><span class="line"></span><br><span class="line">git mv 旧文件名 新文件名   		   <span class="comment">//重命名文件</span></span><br></pre></td></tr></table></figure>
+<h1 id="一-基础正则表达式字符集"><a href="#一-基础正则表达式字符集" class="headerlink" title="一. 基础正则表达式字符集"></a>一. 基础正则表达式字符集</h1><table>
+<thead>
+<tr>
+<th align="left">RE字符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.</td>
+<td>匹配任意字符，不能匹配换行符</td>
+<td>查找e e, eee, e任意一个字符e，但不能是ee：grep -n “e.e” regular.txt</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td>重复零个到无穷多个的前一个RE字符</td>
+<td>找出含有es, ess, esss等字符串：grep  -n “ess*” regular.txt</td>
+</tr>
+<tr>
+<td align="left">?</td>
+<td>零个或一个的前一个RE字符</td>
+<td>查找gd, god这两个字符串：grep  -n “go?d” regluar.txt</td>
+</tr>
+<tr>
+<td align="left">^word</td>
+<td>待查找的字符串（word）在行首</td>
+<td>查找行首为 # 开始的那一行：grep -n  “^#” regular.txt</td>
+</tr>
+<tr>
+<td align="left">Word$</td>
+<td>待查找的字符串（word）在行尾</td>
+<td>将行尾为 ！ 的那一行打印出来：grep -n “!$”  regular.txt</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td>转义字符，将特殊符号的特殊意义去除</td>
+<td>查找含有单引号 ‘ 的那一行：grep -n  “&#39;“ regular.txt</td>
+</tr>
+<tr>
+<td align="left">[list]</td>
+<td>字符集合的RE字符，里面列出想要选取的字符</td>
+<td>查找含有gl或gd的那一行：grep -n “g[ld]” regular.txt</td>
+</tr>
+<tr>
+<td align="left">[n1-n2]</td>
+<td>字符集合的RE字符，里面列出想要选取的字符范围</td>
+<td>查找含有任意数字的那一行：grep -n “[0-9]” regular.txt</td>
+</tr>
+<tr>
+<td align="left">[^list]</td>
+<td>字符集合的RE字符，里面列出不想要选取的字符串或范围</td>
+<td>查找字符串可以是oog, ood, 但不能是oot：grep -n “oo[^t]“ regular.txt</td>
+</tr>
+<tr>
+<td align="left">{n, m}</td>
+<td>连续n到m个的【前一个RE字符】</td>
+<td>在ｇ与ｇ之间有2个到3个的ｏ存在的字符串，亦即goog, gooog：grep -n “go{2, 3}g”  regular.txt</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td>连续n个的前一个RE字符</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">{n, }</td>
+<td>连续n个以上的前一个RE字符</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="二-扩展正则表达式字符集"><a href="#二-扩展正则表达式字符集" class="headerlink" title="二. 扩展正则表达式字符集"></a>二. 扩展正则表达式字符集</h1><table>
+<thead>
+<tr>
+<th align="left">RE字符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td>重复【一个或一个以上】的前一个RE字符</td>
+<td>查找god, good, goood等字符串：grep -n “go+d” regular.txt</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td>用或（or）的方式找出数个字符串</td>
+<td>查找gd或good这两个字符串：grep -n “gd|good”  regular.txt</td>
+</tr>
+<tr>
+<td align="left">( )</td>
+<td>找出【群组】字符串</td>
+<td>查找glad或good这两个字符串，因为ｇ和ｄ是重复的，所以可以将la和oo列于( )中，并以｜来分隔：grep  -n “g(la|oo)d” regular.txt</td>
+</tr>
+<tr>
+<td align="left">( )+</td>
+<td>多个重复群组的判别</td>
+<td>查找开头是A结尾是C，中间有一个以上的”xyz”字符串：grep -n “A(xyz)+C”</td>
+</tr>
+</tbody></table>
+<h1 id="三-贪婪和非贪婪模式"><a href="#三-贪婪和非贪婪模式" class="headerlink" title="三. 贪婪和非贪婪模式"></a>三. 贪婪和非贪婪模式</h1><h2 id="1-什么是贪婪和非贪婪模式"><a href="#1-什么是贪婪和非贪婪模式" class="headerlink" title="1. 什么是贪婪和非贪婪模式"></a>1. 什么是贪婪和非贪婪模式</h2><p>如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="string">"abcaxc"</span>;</span><br><span class="line">Patter p1 = <span class="string">"ab.*c"</span>;</span><br><span class="line">Patter p2 = <span class="string">"ab.*?c"</span>;</span><br></pre></td></tr></table></figure>
 
-
-
-<hr>
-<h1 id="二、远程仓库相关指令"><a href="#二、远程仓库相关指令" class="headerlink" title="二、远程仓库相关指令"></a>二、远程仓库相关指令</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 线上仓库地址	<span class="comment">//关联一个远程库 origin可以修改为github或gitee</span></span><br><span class="line">    </span><br><span class="line">git push –u origin master 			<span class="comment">//把当前master分支推送到远程库(第一次要用-u)</span></span><br><span class="line"></span><br><span class="line">git push origin XX 					<span class="comment">//Git会把XX分支推送到远程库对应的远程分支上</span></span><br><span class="line">    </span><br><span class="line">git clone 线上仓库地址				<span class="comment">//从远程库中克隆</span></span><br><span class="line">    </span><br><span class="line">git remote 							<span class="comment">//查看远程库的信息</span></span><br><span class="line">    </span><br><span class="line">git remote rm origin				<span class="comment">//删除已关联的名为origin的远程库</span></span><br><span class="line">    </span><br><span class="line">git remote –v 						<span class="comment">//查看远程库的详细信息</span></span><br><span class="line">    </span><br><span class="line">git pull							<span class="comment">//拉取远程仓库</span></span><br><span class="line">    </span><br><span class="line">git checkout –b dev  origin/dev		<span class="comment">//创建dev分支并切换到dev分支上，同时关联远程Dev分支</span></span><br></pre></td></tr></table></figure>
-
-<p>==<u>PS:当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支,需要使用<code>git checkout –b dev origin/dev</code> 指令创建远程origin的Dev分支到本地。</u>==</p>
-<hr>
-<h1 id="三、分支操作命令"><a href="#三、分支操作命令" class="headerlink" title="三、分支操作命令"></a>三、分支操作命令</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git branch name  				<span class="comment">//创建分支</span></span><br><span class="line">    </span><br><span class="line">git checkout –b dev  			<span class="comment">//创建dev分支 并切换到dev分支上。git checkout –b dev origin/dev同时关联远程Dev分支</span></span><br><span class="line">    </span><br><span class="line">git branch  					<span class="comment">//查看当前所有的分支</span></span><br><span class="line">    </span><br><span class="line">git checkout master 			<span class="comment">//切换回master分支 使用switch也行</span></span><br><span class="line">    </span><br><span class="line">git merge dev    				<span class="comment">//在当前的分支上合并dev分支</span></span><br><span class="line">    </span><br><span class="line">git merge --no-ff -m <span class="string">"XX"</span> dev	<span class="comment">//不使用Fast forward模式合并，合并后被合并(dev)分支依旧保留</span></span><br><span class="line">    </span><br><span class="line">git branch –d dev 				<span class="comment">//删除dev分支</span></span><br><span class="line">    </span><br><span class="line">git cherry-pick 版本ID		   <span class="comment">//复制一个特定的提交到当前分支（常用来修复BUG）</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="四、现场保护相关命令"><a href="#四、现场保护相关命令" class="headerlink" title="四、现场保护相关命令"></a>四、现场保护相关命令</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git stash 				<span class="comment">//把当前的工作隐藏起来 等以后恢复现场后继续工作</span></span><br><span class="line">    </span><br><span class="line">git stash <span class="built_in">list</span> 			<span class="comment">//查看所有被隐藏的文件列表</span></span><br><span class="line">    </span><br><span class="line">git stash apply 		<span class="comment">//恢复被隐藏的文件，但是stash内的内容不删除</span></span><br><span class="line">    </span><br><span class="line">git stash drop 			<span class="comment">//删除stash内的文件</span></span><br><span class="line">    </span><br><span class="line">git stash pop 			<span class="comment">//恢复文件的同时 stash的内容删除</span></span><br></pre></td></tr></table></figure>
-
+<ul>
+<li><strong>贪婪匹配</strong>：正则表达式一般趋向于最大长度匹配，也就是所谓的贪婪匹配。如上面使用模式<code>p1</code>匹配字符串<code>str</code>，结果就是匹配到：<code>abcaxc</code>  使用的是<code>(ab.*c)</code>。</li>
+<li><strong>非贪婪匹配</strong>：就是匹配到结果就好，最少的匹配字符。如上面使用模式<code>p2</code>匹配字符串<code>str</code>，结果就是匹配到：<code>abc</code>  使用的是<code>(ab.*?c)</code>。<h2 id="2-编程中如何区分两种模式"><a href="#2-编程中如何区分两种模式" class="headerlink" title="2. 编程中如何区分两种模式"></a>2. 编程中如何区分两种模式</h2>==<strong>默认是贪婪模式；在量词后面直接加上一个问号 ？就是非贪婪模式。</strong>==  </li>
+</ul>
+<p><strong>如：A(.*?)C，使用非贪婪模式匹配获取以Ａ开头Ｃ结尾，中间有任意多个任意字符的字符串。</strong></p>
+<blockquote>
+<p>量词：{m,n}：m到n个  </p>
+<p>. ：任意多个  </p>
+<p>+：一个到多个  </p>
+<p>？：0或一个</p>
+</blockquote>
 
     
 
@@ -311,7 +411,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https:/proudrabbit.gitee.io/2020/03/09/Git学习（三）/" title="Git学习（三）" target="_blank">https:/proudrabbit.gitee.io/2020/03/09/Git学习（三）/</a>
+          <a href="https:/proudrabbit.gitee.io/正则表达式.html" title="正则表达式" target="_blank">https:/proudrabbit.gitee.io/正则表达式.html</a>
         </li>
         
         <li>
@@ -337,7 +437,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RE</a>
         		</li>
       		
 		</ul>
@@ -393,7 +497,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https:/ProudRabbit.gitee.io/gitee.io/2020/03/09/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https:/ProudRabbit.gitee.io/gitee.io/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -408,18 +512,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/03/10/Typora-PicGo-core-SMMS%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Typora+PicGo-core+SMMS图床踩坑记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/09/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git学习（二）</div>
+    <a href="/Word%E4%B8%AD%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E5%8F%96%E6%B6%88%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Word中如何找回取消保存的文档内容</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -446,7 +541,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#指令篇"><span class="toc-number">1.</span> <span class="toc-text">指令篇</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、本地操作命令"><span class="toc-number">2.</span> <span class="toc-text">一、本地操作命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、远程仓库相关指令"><span class="toc-number">3.</span> <span class="toc-text">二、远程仓库相关指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、分支操作命令"><span class="toc-number">4.</span> <span class="toc-text">三、分支操作命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、现场保护相关命令"><span class="toc-number">5.</span> <span class="toc-text">四、现场保护相关命令</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-基础正则表达式字符集"><span class="toc-number">1.</span> <span class="toc-text">一. 基础正则表达式字符集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-扩展正则表达式字符集"><span class="toc-number">2.</span> <span class="toc-text">二. 扩展正则表达式字符集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-贪婪和非贪婪模式"><span class="toc-number">3.</span> <span class="toc-text">三. 贪婪和非贪婪模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么是贪婪和非贪婪模式"><span class="toc-number">3.1.</span> <span class="toc-text">1. 什么是贪婪和非贪婪模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-编程中如何区分两种模式"><span class="toc-number">3.2.</span> <span class="toc-text">2. 编程中如何区分两种模式</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
