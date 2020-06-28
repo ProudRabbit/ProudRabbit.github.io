@@ -4,10 +4,10 @@
 
 # Site
 title: ProudRabbit
-subtitle: ''
-description: ''
-keywords:
-author: 路痴种花兔
+subtitle: '路痴的兔子'
+description: '一名路痴兔子的个人博客'
+keywords: 
+author: 路痴的兔子
 language: zh-Hans
 timezone: ''
 
@@ -15,7 +15,8 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://proudrabbit.gitee.io/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title.html
+#permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -130,12 +131,20 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+  
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: 
         gitee: git@gitee.com:proudrabbit/ProudRabbit.git
         github: git@github.com:ProudRabbit/ProudRabbit.github.io.git
   branch: master
+- type: baidu_url_submitter
+
+baidu_url_submit:
+  count: 10               # 提交最新的多少个链接
+  host: https://proudrabbit.gitee.io    # 在百度站长平台中添加的域名
+  token: qmhXRvidMua5r4Y8      # 秘钥
+  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
