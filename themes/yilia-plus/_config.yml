@@ -56,9 +56,9 @@ mathjax: false
 
 # Open link in a new tab | 是否在新窗口打开链接
 open_in_new:
-  article: true  # 文章链接
-  menu: true   # 导航菜单
-  subNav: true  # 子菜单
+  article: false  # 文章链接
+  menu: false   # 导航菜单
+  subNav: false  # 子菜单
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
@@ -145,9 +145,9 @@ music:
   # 播放器尺寸类型(1：长尺寸、2：短尺寸)
   type: 2
   id: 572578819  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul
-  autoPlay: false  # 是否开启自动播放
+  autoPlay: true  # 是否开启自动播放
   # 提示文本(关闭请设置为false)
-  text: '这似乎是首纯音乐，请尽情的欣赏它吧！'
+  text: '你带着光辉降世<br>就算数亿的岁月已将无数的祈愿归于尘土<br>我也依然会继续的祈祷<br>请将爱赐予这孩子<br>在相系的手上留下吻痕~'
 
 # 页面点击小红心
 clickLove:
@@ -183,7 +183,7 @@ since: 2020
 #       loading-bar|mac-osx|minimal
 # color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
 progressBar:
-  enable: false
+  enable: true
   type: 'minimal'  # Keep Quotes | 保留引号避免出错(某些type会导致样式重叠排版错误)
   color: blue
 
