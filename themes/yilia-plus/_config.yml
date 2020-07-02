@@ -64,7 +64,7 @@ open_in_new:
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 0
 # 打赏wording
-reward_wording: '谢谢你请我吃糖果'
+reward_wording: '谢谢你请我吃糖果(*´∇｀*)'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay: /img/alipay.jpg
 # 微信二维码图片地址
@@ -87,7 +87,7 @@ baidu_analytics: ''
 google_analytics: ''
 
 # 网站图标
-favicon: /favicon.ico
+favicon: /img/favicon.ico
 
 # 你的头像url
 avatar: /img/head.jpg
@@ -147,7 +147,7 @@ music:
   id: 572578819  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul
   autoPlay: true  # 是否开启自动播放
   # 提示文本(关闭请设置为false)
-  text: '你带着光辉降世<br>就算数亿的岁月已将无数的祈愿归于尘土<br>我也依然会继续的祈祷<br>请将爱赐予这孩子<br>在相系的手上留下吻痕~'
+  text: false
 
 # 页面点击小红心
 clickLove:
@@ -184,15 +184,15 @@ since: 2020
 # color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
 progressBar:
   enable: true
-  type: 'minimal'  # Keep Quotes | 保留引号避免出错(某些type会导致样式重叠排版错误)
-  color: blue
+  type: 'corner-indicator'  # Keep Quotes | 保留引号避免出错(某些type会导致样式重叠排版错误) corner-indicator loading-bar
+  color: silver             # black
 
 # Apple Touch icon 苹果图标(关闭请设置为false)
 apple_touch_icon: '/apple-touch-icon-180x180.png'
 
 # Tab Title Change | 标签页标题切换
 tab_title_change:
-  enable: true
+  enable: false
   left_tab_title: '(つェ⊂) 我藏好了哦~ '
   return_tab_title: '(*´∇｀*) 被你发现啦~ '
 
@@ -224,13 +224,13 @@ live2d:
   # (关闭请设置为false)
   enable: true
   # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
-  model: hijiki     # 喜欢的几个模型 izumi hijiki haru/02 wanko
+  model: hijiki     # 喜欢的几个模型 hijiki haru/01 haru/02
   display:
-    position: right # 显示位置：left/right(default: 'right')
-    width: 145  # 模型的长度(default: 150)
-    height: 315 # 模型的高度(default: 300)
+    position: left # 显示位置：left/right(default: 'right')
+    width: 150  # 模型的长度(default: 150)
+    height: 300 # 模型的高度(default: 300)
     hOffset: 50 # 水平偏移(default: 0)
-    vOffset: -20 # 垂直偏移(default: -20)
+    vOffset: 1 # 垂直偏移(default: 0)
   mobile:
     show: false # 是否在移动设备上显示(default: true)
     scale: 0.6 # 移动设备上的缩放(default: 0.5)
@@ -274,14 +274,14 @@ friends:
    # img: https://zhousiwei.gitee.io/ibooks/favicon.ico
     #网站简介(可忽略不写)
    # description: 
-  GitHub:
-    url: https://github.com/ProudRabbit
-  码云:
-    url: https://gitee.com/ProudRabbit
+  #GitHub:
+    #url: https://github.com/ProudRabbit
+  #码云:
+    #url: https://gitee.com/ProudRabbit
   #简书:
-   # url: https://www.jianshu.com/u/02cbf31a043a
-  CSDN:
-    url: https://blog.csdn.net/qq_37284607
+    #url: https://www.jianshu.com/u/02cbf31a043a
+  #CSDN:
+    #url: https://blog.csdn.net/qq_37284607
 
 # 关于我
 aboutme: 主要涉及技术：<br>C/C++开发、嵌入式开发、<br>开源爱好者、Linux爱好者、<br><br>联系QQ:1650325981<br><br>依然是只小菜鸡<br><br>刚开始学习搭建个人博客<br><br>希望大佬多多指教<br><br>谢谢大家o(*￣▽￣*)ブ
