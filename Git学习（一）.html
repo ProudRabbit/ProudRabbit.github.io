@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://proudrabbit.gitee.io">
-  <title>Git学习（一） | ProudRabbit</title>
+  <title>Git学习（一） | 兔子的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
@@ -14,7 +14,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习（一）">
 <meta property="og:url" content="https://proudrabbit.gitee.io/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89.html">
-<meta property="og:site_name" content="ProudRabbit">
+<meta property="og:site_name" content="兔子的个人博客">
 <meta property="og:description" content="基础篇这已经是重写第二遍了，原因没做好Git的项目跟踪，然后VScode误操作，删了。。。。😭😭，还是typora好用，不敢用VScode了。。。。 需要工具* Git安装包：地址：https:&#x2F;&#x2F;git-scm.com&#x2F; * Github网站账号 地址：https:&#x2F;&#x2F;github.com&#x2F;">
 <meta property="og:image" content="https://i.loli.net/2020/03/08/9VXrUPDZAwSCjYm.png">
 <meta property="og:image" content="https://i.loli.net/2020/03/08/jHOBoGuVXd1wyb9.png">
@@ -28,17 +28,17 @@
 <meta property="og:image" content="https://i.loli.net/2020/03/08/CygzQBHtISkq5TO.png">
 <meta property="og:image" content="https://i.loli.net/2020/03/08/QPmlKxUAEH5Vb6W.png">
 <meta property="article:published_time" content="2020-03-08T06:53:25.000Z">
-<meta property="article:modified_time" content="2020-06-20T13:51:20.814Z">
+<meta property="article:modified_time" content="2020-07-02T04:09:14.065Z">
 <meta property="article:author" content="路痴的兔子">
 <meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/03/08/9VXrUPDZAwSCjYm.png">
   
-    <link rel="alternative" href="/atom.xml" title="ProudRabbit" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="兔子的个人博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -79,7 +79,7 @@
 
   
     <script src="/lib/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/silver/pace-theme-corner-indicator.css" rel="stylesheet">
   
   <meta name="360-site-verification" content="d52524f63d68a2e4be5584bc63a0dd44" />
 </head>
@@ -101,7 +101,7 @@
 			<h1 class="header-author"><a href="/">路痴的兔子</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">路痴的兔子</p>
+		<p class="header-subtitle">咸鱼也是可以有梦想的！</p>
 		
 
 		<nav class="header-menu">
@@ -153,9 +153,6 @@
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=572578819&auto=1&height=66"></iframe>
 			</div>
 			
-				
-				<p style="font-size: 12px;">你带着光辉降世<br>就算数亿的岁月已将无数的祈愿归于尘土<br>我也依然会继续的祈祷<br>请将爱赐予这孩子<br>在相系的手上留下吻痕~<p>
-			
 		
 		</nav>
 	</header>		
@@ -187,7 +184,7 @@
 			  <h1 class="header-author js-header-author">路痴的兔子</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>路痴的兔子<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>咸鱼也是可以有梦想的！<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -326,17 +323,21 @@
 <table>
 <thead>
 <tr>
-<th>语法1：</th>
-<th>git  add 文件名</th>
+<th>语法</th>
+<th>命令格式</th>
 </tr>
 </thead>
 <tbody><tr>
+<td>语法1：</td>
+<td>git  add 文件名</td>
+</tr>
+<tr>
 <td>语法2：</td>
 <td>git  add 文件名1 文件名2 文件名3……</td>
 </tr>
 <tr>
 <td>语法3：</td>
-<td>git add .             //【添加当前目录到缓存区】</td>
+<td>git  add .    //【添加当前目录下所有文件到缓存区】</td>
 </tr>
 </tbody></table>
 <ol start="6">
@@ -615,23 +616,6 @@
 
 <!--  -->
 
-<script>
-  /* 标签页标题切换 */
-  var originTitle = document.title;
-  var titleTime;
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
-      clearTimeout(titleTime);
-    } else {
-      document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
-      titleTime = setTimeout(function () {
-        document.title = originTitle;
-      }, 2000);
-    }
-  });
-</script>
-
 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
@@ -705,6 +689,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
               </li>
              
@@ -757,37 +745,6 @@
 
     
     	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="https://github.com/ProudRabbit" target="_blank" class="search-title" >
-                
-                  <i class="icon-link icon"></i>
-                
-                GitHub
-              </a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://gitee.com/ProudRabbit" target="_blank" class="search-title" >
-                
-                  <i class="icon-link icon"></i>
-                
-                码云
-              </a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://blog.csdn.net/qq_37284607" target="_blank" class="search-title" >
-                
-                  <i class="icon-link icon"></i>
-                
-                CSDN
-              </a>
-            </li>
-          
-        </ul>
   		
     	</section>
     
@@ -916,11 +873,11 @@
       jsonPath: modelJsonPath
     },
     display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
+       position: "left", 
+       width: 150, 
+       height: 300, 
        hOffset: 50, 
-       vOffset: -20 
+       vOffset: 1 
     },
     mobile: {
        show: false, 
