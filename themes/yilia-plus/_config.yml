@@ -9,13 +9,13 @@ menu:
 subNav:
   github: "https://github.com/ProudRabbit"
   gitee: "https://gitee.com/proudrabbit" # 码云
-  cnblog: "https://blog.csdn.net/qq_37284607"
+  #cnblog: "#"
   #blog: "#"
-  #csdn: "#"
+  csdn: "https://blog.csdn.net/qq_37284607"
   #jianshu: "#" #简书
   #rss: "#"
   #zhihu: "#"
-  #qq: "img/qrcode.jpg"
+  qq: "img/qrcode.jpg"
   #weixin: "img/wxcode.png"
   #weibo: "#"
   #douban: "#"
@@ -215,7 +215,7 @@ activate_power_mode:
 
 # 飘雪特效
 # https://github.com/MlgmXyysd/snow.js
-snow: true
+snow: false
 
 
 # 看板娘动态模型插件
