@@ -56,9 +56,9 @@ mathjax: false
 
 # Open link in a new tab | 是否在新窗口打开链接
 open_in_new:
-  article: false  # 文章链接
-  menu: false   # 导航菜单
-  subNav: false  # 子菜单
+  article: true  # 文章链接
+  menu: true   # 导航菜单
+  subNav: true  # 子菜单
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
@@ -145,9 +145,9 @@ music:
   # 播放器尺寸类型(1：长尺寸、2：短尺寸)
   type: 2
   id: 572578819  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul
-  autoPlay: true  # 是否开启自动播放
+  autoPlay: false  # 是否开启自动播放
   # 提示文本(关闭请设置为false)
-  text: false
+  text: '来一起听首音乐吧o(*￣▽￣*)o'
 
 # 页面点击小红心
 clickLove:

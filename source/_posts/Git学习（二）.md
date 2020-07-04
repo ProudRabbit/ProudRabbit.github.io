@@ -121,7 +121,7 @@ tags: [学习笔记, Git]
 ## 五、同时提交到Github和Gitee仓库
 1. 注册Gitee账号，**<u>==注意邮箱要和Github注册所使用的邮箱一致。==</u>**
 
-2. 添加SSH公钥到Gitee，ssh在 [Git学习（一）](https://proudrabbit.gitee.io/2020/03/08/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/) 六、远程仓库，基于SSH篇章提到怎么使用。
+2. 添加SSH公钥到Gitee，ssh在 [Git学习（一）六、远程仓库](./Git学习（一）.html#2-基于SSH协议（推荐）) 六、远程仓库，基于SSH篇章提到怎么使用。
 
    ![捕获](https://i.loli.net/2020/03/09/8PmMBHTJNc9CioU.jpg)
 
