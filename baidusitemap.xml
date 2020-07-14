@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://proudrabbit.gitee.io/%E9%80%92%E5%BD%92.html</loc>
+    <lastmod>2020-07-14</lastmod>
+  </url>  <url>
+    <loc>https://proudrabbit.gitee.io/git-commit-amend%E8%B8%A9%E5%9D%91.html</loc>
+    <lastmod>2020-07-07</lastmod>
+  </url>  <url>
     <loc>https://proudrabbit.gitee.io/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89.html</loc>
-    <lastmod>2020-07-04</lastmod>
+    <lastmod>2020-07-07</lastmod>
+  </url>  <url>
+    <loc>https://proudrabbit.gitee.io/Typora-PicGo-core-SMMS%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91%E8%AE%B0.html</loc>
+    <lastmod>2020-07-05</lastmod>
   </url>  <url>
     <loc>https://proudrabbit.gitee.io/PyCharm%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%89%80%E5%9C%A8%E8%B7%AF%E5%BE%84.html</loc>
     <lastmod>2020-07-04</lastmod>
@@ -21,12 +30,6 @@
   </url>  <url>
     <loc>https://proudrabbit.gitee.io/Word%E4%B8%AD%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E5%8F%96%E6%B6%88%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9.html</loc>
     <lastmod>2020-05-08</lastmod>
-  </url>  <url>
-    <loc>https://proudrabbit.gitee.io/git-commit-amend%E8%B8%A9%E5%9D%91.html</loc>
-    <lastmod>2020-04-19</lastmod>
-  </url>  <url>
-    <loc>https://proudrabbit.gitee.io/Typora-PicGo-core-SMMS%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91%E8%AE%B0.html</loc>
-    <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://proudrabbit.gitee.io/Git%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89.html</loc>
     <lastmod>2020-03-14</lastmod>
