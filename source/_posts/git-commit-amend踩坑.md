@@ -1,5 +1,5 @@
 ---
-title: git commit --amend
+title: git commit --amend踩坑
 date: 2020-03-14 17:16:26
 tags: [Git, 随笔, Bug]
 ---

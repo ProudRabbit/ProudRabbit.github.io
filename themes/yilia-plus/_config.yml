@@ -120,18 +120,18 @@ gitment_oauth:
 # 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
 # 基于码云的评论系统(https://gitee.com/zhousiwei/giteement)
 giteement:
-  enable: false  # 是否启用码云评论系统
+  enable: true  # 是否启用码云评论系统
   # 是否使用官方js(false可以提升访问速度)
   remote: false
-  redirect_uri: ''   # 应用回调地址(请和配置的第三方应用保持一致)
+  redirect_uri: 'https://proudrabbit.gitee.io/'   # 应用回调地址(请和配置的第三方应用保持一致)
   # 不能更改(网上开源项目`https://github.com/Rob--W/cors-anywhere`作者提供的专门用来跨域服务器的配置)
   oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token
-  giteeID: ''  # 你的码云账号英文名
+  giteeID: 'ProudRabbit'  # 你的码云账号英文名
   # 存储评论的 repo name(需要在码云仓库创建公开仓库)
-  repo: ''
+  repo: 'Giteement-yilia-plus'
   gitment_oauth:
-    client_id: ''           #client ID
-    client_secret: ''       #client secret
+    client_id: '7a9ab226573e8c1fd28a908ea86f11f86e1792f57dc0a95c24ee9effc2a76010'           #client ID
+    client_secret: '3ce47fbdb2bd6b232dd9c83129464fad7962d3a199ea5a58846ba2b1bce54634'       #client secret
 
 # 访问量统计功能(不蒜子)
 busuanzi:
@@ -262,7 +262,7 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友链'
+  friends: '友情链接'
   aboutme: '关于我'
 
 # 友情链接
@@ -274,8 +274,8 @@ friends:
    # img: https://zhousiwei.gitee.io/ibooks/favicon.ico
     #网站简介(可忽略不写)
    # description: 
-  #GitHub:
-    #url: https://github.com/ProudRabbit
+  正月点灯笼:
+    url: https://blog.csdn.net/qq_37000789
   #码云:
     #url: https://gitee.com/ProudRabbit
   #简书:
