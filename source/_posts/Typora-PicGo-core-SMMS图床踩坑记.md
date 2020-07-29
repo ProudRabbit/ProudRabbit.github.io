@@ -4,9 +4,7 @@ date: 2020-03-10 10:40:22
 tags: [随笔, Typora, Bug]
 ---
 
-最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。**PicGo-Core已经解决SMMS V1 API不能上传的问题，直接点击下载或更新，更新下PicGo-Core就行了。**
-
-
+最近把Typora更新后发现，Typora支持PicGo图床工具了。然后赶紧尝鲜，结果踩了不少坑。经过一番百度后发现博主[^LzSkyline]已经解决了，遂按照他的方法解决，但还是踩了坑。于是写了这篇随笔。**PicGo-Core已经解决SMMS V1 API不能上传的问题，直接点击下载或更新，更新下PicGo-Core就行了。**关于PicGo-Core的配置可以看官方的指南。[PicGo-Core中文配置指南](https://picgo.github.io/PicGo-Core-Doc/zh/guide/config.html)
 
 <!--more-->
 
