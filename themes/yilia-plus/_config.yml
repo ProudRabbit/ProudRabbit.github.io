@@ -1,9 +1,12 @@
 ﻿# Header-菜单
 menu:
   主页: /
-  随笔: /tags/随笔/
+  个人简历: /jianli/index.html
   学习笔记: /tags/学习笔记/
+  Linux: /tags/Linux/
+  随笔: /tags/随笔/
   归档: /archives/index.html
+  
 
 # subNav-子导航
 subNav:
@@ -143,7 +146,7 @@ busuanzi:
 music:
   enable: true
   # 播放器尺寸类型(1：长尺寸、2：短尺寸)
-  type: 2
+  type: 1
   id: 572578819  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul
   autoPlay: false  # 是否开启自动播放
   # 提示文本(关闭请设置为false)
@@ -162,7 +165,8 @@ github:
 # 页脚 Litten(此配置项已弃用)
 # 帮助我们让更多人可以更方便使用Hexo，请尽量不要修改此主题配置
 pageFooter:
-  litten: GitHub:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">hexo-theme-yilia-plus</a>
+  littenHexo: 由<a href="https://hexo.io/" target="_blank">Hexo</a>强力驱动
+  littenTheme: 主题:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">yilia-plus</a> 
 
 # 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
 baidu_push: true
@@ -229,8 +233,8 @@ live2d:
     position: left # 显示位置：left/right(default: 'right')
     width: 150  # 模型的长度(default: 150)
     height: 300 # 模型的高度(default: 300)
-    hOffset: 50 # 水平偏移(default: 0)
-    vOffset: 1 # 垂直偏移(default: 0)
+    hOffset: 50 # 水平偏移(default: 0)  haru/01 50  hijiki 50
+    vOffset: 0 # 垂直偏移(default: 0)   haru/01 1   hijiki 0
   mobile:
     show: false # 是否在移动设备上显示(default: true)
     scale: 0.6 # 移动设备上的缩放(default: 0.5)
