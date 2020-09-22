@@ -2,7 +2,7 @@
 menu:
   主页: /
   个人简历: /jianli/index.html
-  学习笔记: /tags/学习笔记/
+  嵌入式: /tags/嵌入式/
   Linux: /tags/Linux/
   随笔: /tags/随笔/
   归档: /archives/index.html
@@ -18,7 +18,7 @@ subNav:
   #jianshu: "#" #简书
   #rss: "#"
   #zhihu: "#"
-  qq: "img/qrcode.jpg"
+  qq: "img/qrcode.png"
   #weixin: "img/wxcode.png"
   #weibo: "#"
   #douban: "#"

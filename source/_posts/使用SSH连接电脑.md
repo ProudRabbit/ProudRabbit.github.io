@@ -1,7 +1,7 @@
 ---
 title: 使用SSH连接电脑
 date: 2020-07-02 12:10:02
-tags: [学习笔记, SSH]
+tags: [随笔, SSH]
 keywords:
 description:
 ---

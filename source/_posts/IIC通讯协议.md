@@ -1,12 +1,12 @@
 ---
 title: IIC通讯协议
 date: 2020-07-03 12:48:10
-tags: [学习笔记, IIC]
+tags: [嵌入式, IIC]
 keywords:
 description:
 ---
 
-# IIC通讯协议  
+# IIC通讯协议
 
 简单介绍下`IIC`的通讯时序，然后给出51单片机实现的代码。
 
