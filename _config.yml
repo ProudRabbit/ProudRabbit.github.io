@@ -168,7 +168,7 @@ deploy:
 - type: baidu_url_submitter
 
 baidu_url_submit:
-  count: 10               # 提交最新的多少个链接
+  count: 20               # 提交最新的多少个链接
   host: https://proudrabbit.gitee.io    # 在百度站长平台中添加的域名
   token: qmhXRvidMua5r4Y8      # 秘钥
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
