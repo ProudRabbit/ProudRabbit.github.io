@@ -6,7 +6,7 @@ keywords:
 description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
 ---
 
-# IMX6ULL裸机开发学习
+**IMX6ULL裸机开发学习**
 
 以下内容是我在学习正点原子`IMX6ULL`开发板`alpha`中记录的笔记，部分摘录自正点原子`IMX6ULL开发手册`。推荐看《跟我一起写Makefile》
 

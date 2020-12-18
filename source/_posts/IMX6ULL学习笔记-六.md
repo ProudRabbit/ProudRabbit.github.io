@@ -6,7 +6,7 @@ keywords:
 description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
 ---
 
-# IMX6ULL裸机开发学习
+**IMX6ULL裸机开发学习**
 
 以下内容是我在学习正点原子`IMX6ULL`开发板`alpha`中记录的笔记，部分摘录自正点原子`IMX6ULL开发手册`。
 
@@ -29,23 +29,22 @@ description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
 
 4. 修改主频和网络驱动（需要保证linux系统可以正常运行，因此需要暂时使用根文件系统） 
 
-- 设置`bootcmd` 环境变量，使用 的是SD卡启动，镜像和设备树存放在SD卡中， `setenv bootcmd 'fatload mmc 0:1 80800000 zimage;fatload mmc 0:1 83000000 imx6ull-14x14-myboard.dtb;bootz 80800000 - 83000000;'`  
+   - 设置`bootcmd` 环境变量，使用 的是SD卡启动，镜像和设备树存放在SD卡中， `setenv bootcmd 'fatload mmc 0:1 80800000 zimage;fatload mmc 0:1 83000000 imx6ull-14x14-myboard.dtb;bootz 80800000 - 83000000;'`  
+   - 设置`bootargs`，根文件系统存放在EMMC的分区2中，命令如下：`setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw'`  
+   - 将`imx6ull-14x14-myboard.dts`中的`usdhc2`节点，改为以下内容。  
 
-- 设置`bootargs`，根文件系统存放在EMMC的分区2中，命令如下：`setenv bootargs 'console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw'`  
-- 将`imx6ull-14x14-myboard.dts`中的`usdhc2`节点，改为以下内容。  
-  
-```c
-     	pinctrl-names = "default", "state_100mhz", "state_200mhz";
-     	pinctrl-0 = <&pinctrl_usdhc2_8bit>;
-     	pinctrl-1 = <&pinctrl_usdhc2_8bit_100mhz>;
-     	pinctrl-2 = <&pinctrl_usdhc2_8bit_200mhz>;
-     	bus-width = <8>;
-     	non-removable;
-     	status = "okay";
-```
+   ```c
+   pinctrl-names = "default", "state_100mhz", "state_200mhz";
+   pinctrl-0 = <&pinctrl_usdhc2_8bit>;
+   pinctrl-1 = <&pinctrl_usdhc2_8bit_100mhz>;
+   pinctrl-2 = <&pinctrl_usdhc2_8bit_200mhz>;
+   bus-width = <8>;
+   non-removable;
+   status = "okay";
+   ```
 
-- 然后使用`boot` 命令启动`linux`，至此启动完成。
-  
+   - 然后使用`boot` 命令启动`linux`，至此启动完成。
+
 5. 修改网络驱动。
 
    修改dts文件对应位置代码如下
@@ -178,17 +177,17 @@ description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
    >
    > 2. Network device support
    >
-> 3. PHY Device support and infrastructure
+   > 3. PHY Device support and infrastructure
    >
-> 4. Drivers for SMSC PHYs
-
-最后编译下Linux的内核文件。
-
+   > 4. Drivers for SMSC PHYs
+   
+   最后编译下Linux的内核文件。
+   
    然后使用如下命令加载Linux镜像到内存中。
 
    ```c
    fatload mmc 0:1 80800000 zimage 
-fatload mmc 0:1 83000000 imx6ull-14x14-myboard.dts 
+   fatload mmc 0:1 83000000 imx6ull-14x14-myboard.dts 
    bootz 80800000 - 83000000
    ```
 

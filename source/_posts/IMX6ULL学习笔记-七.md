@@ -6,7 +6,7 @@ keywords:
 description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
 ---
 
-# IMX6ULL裸机开发学习
+**IMX6ULL裸机开发学习**
 
 以下内容是我在学习正点原子`IMX6ULL`开发板`alpha`中记录的笔记，部分摘录自正点原子`IMX6ULL开发手册`。
 
@@ -108,19 +108,19 @@ description: 正点原子alpha开发板IMX6ULL裸机开发学习笔记。
 4. 向根文件系统添加`lib`库文件  
 
    库文件是交叉编译器的库文件。
-
-- 将`/usr/local/arm/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/arm-linux-
+   
+   - 将`/usr/local/arm/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/arm-linux-
      gnueabihf/libc/lib`，`/usr/local/arm/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/lib`下的内容拷贝到`rootfs`下的`lib`文件夹内。  
-
-- 重新拷贝`ld-linux-armhf.so.3`文件到`rootfs`下的`lib`中，而不是上面拷贝的软链接文件。
-
-  ````
-  cp ld-linux-armhf.so.3 /home/zuozhongkai/linux/nfs/rootfs/lib/`
-  ````
-
-- 拷贝`/usr/local/arm/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/lib`下的文件到`rootfs/usr/lib`下。  
-
-- 最后在根文件系统中创建其他文件夹,如 `dev`、`proc`、`mnt`、`sys`、`tmp` 和 `root` 等。
+   
+   - 重新拷贝`ld-linux-armhf.so.3`文件到`rootfs`下的`lib`中，而不是上面拷贝的软链接文件。
+   
+     ```c
+     cp ld-linux-armhf.so.3 /home/zuozhongkai/linux/nfs/rootfs/lib/`
+     ```
+   
+   - 拷贝`/usr/local/arm/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/lib`下的文件到`rootfs/usr/lib`下。  
+   
+   - 最后在根文件系统中创建其他文件夹,如 `dev`、`proc`、`mnt`、`sys`、`tmp` 和 `root` 等。
 
 ## 3.根文件系统初步测试
 
