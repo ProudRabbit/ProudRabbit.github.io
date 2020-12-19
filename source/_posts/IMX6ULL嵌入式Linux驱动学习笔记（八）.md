@@ -245,7 +245,7 @@ static int __init timer_init(void)
 		goto fail_class;
 	}
 
-	/* 创建设备 */
+	/* 创建设备节点 */
 	timerdev.device = device_create(timerdev.class, NULL, timerdev.devid, NULL, TIMER_NAME);
 	if (IS_ERR(timerdev.device))
 	{

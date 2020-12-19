@@ -847,7 +847,7 @@ static int __init dtsled_init(void)
 		goto fail_class;
 	}
 
-	/* 3.2创建设备 */
+	/* 3.2创建设备节点 */
 	dtsled.device = device_create(dtsled.class, NULL, dtsled.devid, NULL, DTSLED_NAME);
 	if (IS_ERR(dtsled.device))
 	{

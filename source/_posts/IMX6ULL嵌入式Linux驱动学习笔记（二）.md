@@ -158,34 +158,59 @@ struct file_operations {
 多借鉴别人的驱动程序。
 
 ```c
-#include <linux/module.h>
+#include <linux/types.h>
 #include <linux/kernel.h>
+#include <linux/delay.h>
+#include <linux/ide.h>
 #include <linux/init.h>
-#include <linux/fs.h>
+#include <linux/module.h>
+#include <linux/gpio.h>
+#include <linux/cdev.h>
+#include <linux/of.h>
+#include <linux/of_address.h>
+#include <linux/of_irq.h>
 
-#define CHRDEVBASE_MAJOR	100				// 主设备号，0自动分配
 #define CHRDEVBASE_NAME		"chrdevbase"	// 名字
+#define CHRDEVBASE_CNT		1
+
+/* 设备结构体 */
+struct chrdev 
+{
+	dev_t devid;			/* 设备号 */
+	int major;				/* 主设备号 */
+    int minor;
+	struct cdev cdev;		/* 字符设备 */
+	struct class *class;	/* 类 */
+	struct device *device;	/* 设备节点 */
+	struct device_node *nd;	/* 设备树节点 */
+};
+
+struct chrdev chrdevbase;
 
 static int chrdevbase_open(struct inode *inode, struct file *filp)
 {
+    filp->private_data = &chrdevbase;
 	printk("chrdevbase_open!");
 	return 0;
 }
 
 static int chrdevbase_close(struct inode *inode, struct file *filp)
 {
+    struct chrdev *dev = filp->private_data;
 	printk("chrdevbase_close!");
 	return 0;
 }
 
 static ssize_t chrdevbase_read(struct file *filp, char __user *buf, size_t count, loff_t *ppos)
 {
+    struct chrdev *dev = filp->private_data;
 	printk("chrdevbase_read!");
 	return 0;
 }
 
 static ssize_t chrdevbase_write(struct file *filp, const char __user *buf, size_t count, loff_t *ppos)
 {
+    struct chrdev *dev = filp->private_data;
 	printk("chrdevbase_write!");
 	return 0;
 }
@@ -201,21 +226,77 @@ static struct file_operations chrdevbase_fops = {
 static int __init chrdevbase_init(void)
 {
 	int ret = 0;
-	printk("chrdevbase_init\r\n");
-	/* 注册字符设备 */
-	ret = register_chrdev(CHRDEVBASE_MAJOR, CHRDEVBASE_NAME, &chrdevbase_fops);
+
+	/* 1.注册字符设备 */
+	/* 1.1 申请设备号 */
+	chrdevbase.major = 0;	/* 设备号由内核分配 */
+	if (chrdevbase.major)
+	{
+		/* 定义了设备号 */
+		chrdevbase.devid = MKDEV(chrdevbase.major,0);
+		ret = register_chrdev_region(chrdevbase.devid, CHRDEVBASE_CNT, CHRDEVBASE_NAME);
+	}
+	else
+	{
+		/* 没有给定设备号,向内核申请*/
+		ret = alloc_chrdev_region(&chrdevbase.devid, 0, CHRDEVBASE_CNT, CHRDEVBASE_NAME);
+	}
+	
 	if (ret < 0)
 	{
-		printk("chrdevbase_init failed\r\n");
+		goto fail_devid;
 	}
+
+	/* 1.1 添加字符设备 */
+	chrdevbase.cdev.owner = THIS_MODULE;
+	cdev_init(&chrdevbase.cdev, &chrdevbase_fops);
+	ret = cdev_add(&chrdevbase.cdev, chrdevbase.devid, CHRDEVBASE_CNT);
+	if (ret < 0)
+	{
+		goto fail_cdev;
+	}
+	
+	/* 3.自动创建设备节点 */
+	/* 3.1 创建类 */
+	chrdevbase.class = class_create(THIS_MODULE, CHRDEVBASE_NAME);
+	if (IS_ERR(chrdevbase.class))
+	{
+		ret = PTR_ERR(chrdevbase.class);
+		goto fail_class;
+	}
+
+	/* 3.2创建设备节点 */
+	chrdevbase.device = device_create(chrdevbase.class, NULL, chrdevbase.devid, NULL, CHRDEVBASE_NAME);
+	if (IS_ERR(chrdevbase.device))
+	{
+		ret = PTR_ERR(chrdevbase.device);
+		goto fail_device;
+	}
+
 	return 0;
+
+fail_findnd:
+	device_destroy(chrdevbase.class, chrdevbase.devid);
+fail_device:
+	class_destroy(chrdevbase.class);
+fail_class:
+	cdev_del(&chrdevbase.cdev);
+fail_cdev:
+	unregister_chrdev_region(chrdevbase.devid, CHRDEVBASE_CNT);
+fail_devid:
+	return ret;
 }
 
 static void __exit chrdevbase_exit(void)
 {
-	printk("chrdevbase_exit\r\n");
-	unregister_chrdev(CHRDEVBASE_MAJOR, CHRDEVBASE_NAME);
-	/* 注销字符设备 */
+	/* 摧毁设备节点 */
+	device_destroy(chrdevbase.class, chrdevbase.devid);
+	/* 摧毁类 */
+	class_destroy(chrdevbase.class);
+	/* 删除字符设备 */
+	cdev_del(&chrdevbase.cdev);
+	/* 释放设备号 */
+	unregister_chrdev_region(chrdevbase.devid, CHRDEVBASE_CNT);
 }
 
 /**
@@ -223,8 +304,8 @@ static void __exit chrdevbase_exit(void)
  * */
 module_init(chrdevbase_init);	// 入口函数
 module_exit(chrdevbase_exit);	// 出口函数
-
 MODULE_LICENSE("GPL");
+MODULE_AUTHOR("XXXX");
 ```
 
 ## 七、编写应用程序

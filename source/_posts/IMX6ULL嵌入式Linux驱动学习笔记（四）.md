@@ -69,45 +69,45 @@ cdev_init(struct cdev *cdev, const struct file_operations *fops)
 ```
 
 3. 创建设备节点
-   3.1. 创建类
+   3.1. 创建设备类
 
-   创建设备节点需要先 使用`class_create()` 函数创建类。
+   创建设备节点需要先使用`class_create()` 函数创建类。
+   
+   ```c
+   /* 创建类 */
+   newChrLed.class = class_create(THIS_MODULE, LED_NAME);
+   if (IS_ERR(newChrLed.class))
+   {
+       return PTR_ERR(newChrLed.class);
+   }
+   ```
+   
+   3.2. 创建设备节点
+   
+   使用 `device_create()` 函数来创建设备节点。
+   
+   ```c
+   /* 创建设备节点 */
+   newChrLed.device = device_create(newChrLed.class, NULL, newChrLed.devid, NULL, LED_NAME);
+   if (IS_ERR(newChrLed.device))
+   {
+       return PTR_ERR(newChrLed.device);
+   }
+   ```
 
-```c
-/* 创建类 */
-newChrLed.class = class_create(THIS_MODULE, LED_NAME);
-if (IS_ERR(newChrLed.class))
-{
-    return PTR_ERR(newChrLed.class);
-}
-```
+4. 销毁设备节点和类
 
-   3.2. 创建设备  
+   在驱动卸载的时候，需要对设备节点进行销毁。在驱动出口函数中使用如下代码进行销毁：
+   
+   ```c
+   /* 摧毁设备节点 */
+   device_destroy(newChrLed.class, newChrLed.devid);
+   
+   /* 摧毁类 */
+   class_destroy(newChrLed.class);
+   ```
 
-   使用 `device_create()` 函数来创建设备。
-
-```c
-/* 创建设备 */
-newChrLed.device = device_create(newChrLed.class, NULL, newChrLed.devid, NULL, LED_NAME);
-if (IS_ERR(newChrLed.device))
-{
-    return PTR_ERR(newChrLed.device);
-}
-```
-
-4. 销毁设备和类
-
-   在驱动卸载的时候，需要对设备进行销毁。在驱动出口函数中使用如下代码进行销毁：
-
-```c
-/* 摧毁设备 */
-device_destroy(newChrLed.class, newChrLed.devid);
-
-/* 摧毁类 */
-class_destroy(newChrLed.class);
-```
-
-​		**因为创建设备是根据类来创建的，因此在销毁时，需要先销毁设备再销毁类。**
+​		**因为创建设备节点是根据类来创建的，因此在销毁时，需要先销毁设备节点再销毁类。**
 
 ## 三、文件私有数据  
 
@@ -334,7 +334,7 @@ static int __init newchrled_init(void)
 		ret = PTR_ERR(newChrLed.class);
 		goto fail_class;
 	}
-	/* 创建设备 */
+	/* 创建设备节点 */
 	newChrLed.device = device_create(newChrLed.class, NULL, newChrLed.devid, NULL, LED_NAME);
 	if (IS_ERR(newChrLed.device))
 	{

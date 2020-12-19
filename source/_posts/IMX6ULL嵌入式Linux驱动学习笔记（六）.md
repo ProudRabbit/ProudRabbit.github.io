@@ -114,7 +114,7 @@ imx6ul-evk {
 #include <asm/io.h>
 
 
-#define GPIOLED_CNT	1
+#define GPIOLED_CNT		1
 #define GPIOLED_NAME	"gpioled"
 
 #define LEDOFF	0
@@ -219,7 +219,8 @@ static int __init led_init(void)
 		ret = PTR_ERR(gpioled.class);
 		goto fail_class;
 	}
-
+	
+    /* 创建设备节点 */
 	gpioled.device = device_create(gpioled.class, NULL, gpioled.devid, NULL, GPIOLED_NAME);
 	if (IS_ERR(gpioled.device))
 	{
