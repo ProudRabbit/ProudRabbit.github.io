@@ -732,7 +732,7 @@ html {
     position: absolute;
     right: 0;
     min-height: 100%;
-    background: #eaeaea;
+    /* background: #eaeaea; */
     left: 300px;
     width: auto
 }
@@ -747,7 +747,8 @@ html {
 }
 
 .left-col {
-    background: #fff;
+    /* background: #fff; */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
     width: 300px;
     position: fixed;
     opacity: 1;
@@ -2073,12 +2074,20 @@ pre .id {
 }
 
 .article {
+    /*
     margin: 30px;
     position: relative;
     border: 1px solid #ddd;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     background: #fff;
+    transition: all .2s ease-in
+    */
+    margin: 30px;
+    border: 1px solid #ddd;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: rgba(255,255,255,.5);
     transition: all .2s ease-in
 }
 

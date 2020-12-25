@@ -217,9 +217,23 @@ activate_power_mode:
   # 是否开启摇动
   shake: false
 
-# 飘雪特效
+# 飘雪特效1 小雪花
 # https://github.com/MlgmXyysd/snow.js
 snow: false
+
+# 雪花特效2 大雪花
+snow2: false
+
+# https://github.com/hustcc/canvas-nest.js
+# 配置详见： https://github.com/hustcc/canvas-nest.js#configuration
+# 动态线条效果，会向鼠标集中
+canvas_nest:
+  enable: true
+  color: '28,28,28'                # 线条颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  pointColor: '26,1,57'           # 点的颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  opacity: '1'               # 线条不透明度 (0~1), default: 0.5.  1不透明
+  count: '99'                  # 线条数量, default: 99.
+  zIndex: '-1'                 # z-index 背景属性, default: -1.
 
 
 # 看板娘动态模型插件
@@ -244,8 +258,8 @@ live2d:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  # header: '#D3D1DC'
-  header: '#4d4d4d'
+  # header: '#D3D1DC' '#4d4d4d'
+  header: 'rgba(77, 77, 77, 0.5)'
   gif:
     # 是否启用左侧边栏动态图效果
     enable: false

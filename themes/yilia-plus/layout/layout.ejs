@@ -45,6 +45,7 @@
   <% if (theme.live2d && theme.live2d.enable){ %>
     <%- partial('_partial/live2d-widget') %>
   <% } %>
+  <!-- 雪花特效1 -->
   <% if (theme.snow){ %>
   <script type="text/javascript" src="<%- url_for('lib/snow.js') %>"></script>
   <script type="text/javascript" src="<%- url_for('lib/jquery-2.1.4.min.js') %>"></script>
@@ -56,7 +57,18 @@
     });
   </script>
   <% } %>
-
+  <!-- 雪花特效2 -->
+  <% if (theme.snow2){ %>
+    <script type="text/javascript" src="<%- url_for('lib/jquery-2.1.4.min.js') %>"></script>
+    <script type="text/javascript" src="<%- url_for('lib/snow2.js') %>"></script>
+  <% } %>
+  <!--动态线条背景-->
+  <% if (theme.canvas_nest.enable){ %>
+    <script type="text/javascript" color="<%=theme.canvas_nest.color %>" opacity="<%=theme.canvas_nest.opacity %>" 
+        zIndex="<%=theme.canvas_nest.zIndex %>" count="<%=theme.canvas_nest.count %>" 
+        src="<%- url_for('//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js') %>">
+    </script>
+  <% } %>
 </body>
 
 </html>
