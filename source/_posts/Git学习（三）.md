@@ -52,24 +52,33 @@ git mv 旧文件名 新文件名   		   //重命名文件
 # 二、远程仓库相关指令
 
 ```c
-git remote add origin 线上仓库地址	//关联一个远程库 origin可以修改为github或gitee
-    
-git push –u origin master 			//把当前master分支推送到远程库(第一次要用-u)
-
-git push origin XX 					//Git会把XX分支推送到远程库对应的远程分支上
-    
-git clone 线上仓库地址				//从远程库中克隆
-    
 git remote 							//查看远程库的信息
     
 git remote rm origin				//删除已关联的名为origin的远程库
     
 git remote –v 						//查看远程库的详细信息
-    
-git pull							//拉取远程仓库
-    
-git checkout –b dev  origin/dev		//创建dev分支并切换到dev分支上，同时关联远程Dev分支
 
+git remote add origin 线上仓库地址	//关联一个远程库 origin可以修改为github或gitee
+
+git clone 线上仓库地址				//从远程库中克隆 
+
+git push							//将本地当前分支 推送到 与本地当前分支同名的远程分支上
+    
+git push origin XX 					//将本地当前分支 推送到 与本地当前分支同名的远程分支上
+
+git push origin 本地分支名:远程分支名	 //将本地当前分支 推送到 远程指定分支上
+
+git pull							//将与本地当前分支同名的远程分支 拉取到 本地当前分支上
+
+git pull origin	远程分支名			//将远程指定分支 拉取到 本地当前分支上
+
+git pull origin 远程分支名:本地分支名	 //将远程指定分支 拉取到 本地指定分支上
+    
+git checkout –b dev  origin/dev		//创建dev分支并切换到dev分支上，同时关联远程Dev分支 克隆线上仓库后使用
+
+git push --set-upstream origin 本地分支名 //将本地分支与远程同名分支相关联
+// 简写方式
+git push -u origin 本地分支名
 ```
 
 ==<u>PS:当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支,需要使用`git checkout –b dev origin/dev` 指令创建远程origin的Dev分支到本地。</u>==
@@ -96,7 +105,6 @@ git merge --no-ff -m "XX" dev	//不使用Fast forward模式合并，合并后被
 git branch –d dev 				//删除dev分支
     
 git cherry-pick 版本ID		   //复制一个特定的提交到当前分支（常用来修复BUG）
-
 ```
 
 # 四、现场保护相关命令
@@ -111,6 +119,5 @@ git stash apply 		//恢复被隐藏的文件，但是stash内的内容不删除
 git stash drop 			//删除stash内的文件
     
 git stash pop 			//恢复文件的同时 stash的内容删除
-
 ```
 
