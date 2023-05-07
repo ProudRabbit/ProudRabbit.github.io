@@ -1,0 +1,472 @@
+---
+title: hexo博客yilia-plus主题更换Beaudar评论插件
+date: 2021-08-23 13:30:03
+tags: [hexo, 软件使用, Bug]
+keywords: [hexo, yilia-plus, Beaudar, 表达]
+description: 因为yilia-plus自带的gitment和giteement评论插件都不能用了，所以将评论插件更换为Beaudar(表达)。
+---
+
+[toc]
+
+# hexo博客yilia-plus主题更换Beaudar评论插件
+
+因为`yilia-plus`自带的`giteement`和`gitment`评论插件都不能用了，所以更换评论插件为[Beaudar - 表达](https://beaudar.lipk.org/)。可以在我的博客查看效果[兔子的个人博客 - Hexo Blog (gitee.io)](https://proudrabbit.gitee.io/)。`Beaudar `名称源于粤语“表达”的发音，是 [Utterances](http://utteranc.es/) 的中文版本，在此感谢**执手对影成双**大佬。关于各评论插件的优缺点可以看这篇博客[第三方评论系统之我见 | 云游君的小站 (yunyoujun.cn)](https://www.yunyoujun.cn/share/third-party-comment-system/)，这里不再赘述。
+
+<!--more-->
+
+## 一、安装Beaudar app。
+
+首先需要给仓库安装[GitHub Apps - Beaudar](https://github.com/apps/beaudar)。我这里安装过了，所以显示的是配置，安装时，选择安装到你要保存评论的仓库。
+
+![Beaudarapp安装界面](https://i.loli.net/2021/08/23/fO4RCc1YZMWljwX.png)
+
+安装完成后需要对其进行配置，在这里[Beaudar - 表达 (lipk.org)](https://beaudar.lipk.org/)对其进行配置。配置完成后，会在网页最下面生成代码，代码如下。
+
+```html
+<script src="https://beaudar.lipk.org/client.js"
+        repo="在此处输入仓库"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+## 二、添加到主题中
+
+经过第一步的操作，已经拿到了自己的代码，接下来只要添加到自己的主题中就行，添加方式分两种，首先说第一种。
+
+### 1.直接拉取仓库到本地。
+
+我已经将代码修改后向`yilia-plus`的原作者[JoeyBling/hexo-theme-yilia-plus: 一个简洁优雅的hexo主题](https://github.com/JoeyBling/hexo-theme-yilia-plus)提出了PR请求，等待同意后，拉取更新即可，如果不想等，拉取我从原作者fork的仓库下来也行[ProudRabbit/hexo-theme-yilia-plus](https://github.com/ProudRabbit/hexo-theme-yilia-plus)，拉取到你的博客主题下之后进行配置即可，最好先备份下你原来的配置，防止配置丢失。在主题的配置文件`_config.yml`的`136`行，将第一步得到的配置信息填写进去即可。
+
+> 我的hexo版本
+>
+> hexo: 4.2.1
+> hexo-cli: 3.1.0
+> os: Windows_NT 10.0.19042 win32 x64
+> node: 12.18.2
+> v8: 7.8.279.23-node.39
+> uv: 1.38.0
+> zlib: 1.2.11
+> brotli: 1.0.7
+> ares: 1.16.0
+> modules: 72
+> nghttp2: 1.41.0
+> napi: 6
+> llhttp: 2.0.4
+> http_parser: 2.9.3
+> openssl: 1.1.1g
+> cldr: 37.0
+> icu: 67.1
+> tz: 2019c
+> unicode: 13.0
+
+```yaml
+# Header-菜单
+menu:
+  主页: /
+  技术笔记: https://zhousiwei.gitee.io/ibooks/
+  随笔: /tags/随笔/
+
+# subNav-子导航
+subNav:
+  - github: "#"
+  - github: "#" # (支持设置多个)
+  - gitee: "#" # 码云
+  - jianshu: "#" #简书
+  # - cnblog: "#"
+  # - blog: "#"
+  # - csdn: "#"
+  # - rss: "#"
+  # - zhihu: "#"
+  # - qq: "img/2434387555.jpg"
+  # - weixin: "img/weixin_.png"
+  # - weibo: "#"
+  # - douban: "#"
+  # - segmentfault: "#"
+  # - bilibili: "#"
+  # - acfun: "#"
+  # - mail: "mailto:zhousiwei0911@qq.com"
+  # - facebook: "#"
+  # - google: "#"
+  # - twitter: "#"
+  # - linkedin: "#"
+
+# 悬停预览图片效果
+hover_effect:
+  ## `global` 0: Set separately, 1: Enable global 2: Close global
+  ## `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
+  global: 2
+  # SubNav-导航
+  subNav: true
+
+# RSS订阅(关于如何配置启用:https://www.jianshu.com/p/2aaac7a19736)
+rss: /atom.xml
+
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 / 设为 /blog/。
+# 新版本已弃用，请在博客根目录文件进行配置
+# root: /
+
+# Content
+
+# 文章太长，截断按钮文字(在需要截断的行增加此标记：<!--more-->)
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+# 数学公式
+mathjax: false
+
+# Open link in a new tab | 是否在新窗口打开链接
+open_in_new:
+  article: true  # 文章链接
+  menu: true   # 导航菜单
+  subNav: true  # 子菜单
+
+# 打赏
+# 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 2
+# 打赏wording
+reward_wording: '谢谢你请我吃糖果'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+alipay: /img/alipay.jpg
+# 微信二维码图片地址
+weixin: /img/weixin.png
+
+# 目录
+# 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
+toc: 1
+# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
+toc_hide_index: true
+# 目录为空时的提示
+toc_empty_wording: '目录，不存在的…'
+
+# 是否有快速回到顶部的按钮
+top: true
+
+# Miscellaneous
+# 百度统计
+baidu_analytics: ''
+google_analytics: ''
+
+# 网站图标
+favicon: /favicon.ico
+
+# 你的头像url
+avatar: /img/head.jpg
+
+# 是否开启分享
+share_jia: true
+
+# 评论：1、畅言；2、Disqus；3、Gitment；4、Giteement 5、beaudar-表达
+# 不需要使用某项，直接设置值为false，或注释掉
+# 具体请参考wiki：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki
+
+# 1、畅言
+changyan_appid: false
+changyan_conf: false
+
+# 2、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia-plus的
+disqus: false
+
+# 3、Gitment----基于GitHub的评论系统(关闭请设置gitment_owner为false)
+# 关于如何集成:https://www.jianshu.com/p/ac7658cc912f
+gitment_owner: false      #你的 GitHub ID
+# 是否使用官方js(false可以提升访问速度，本地修改过一部分的js，官方js可能会出现服务器不稳定，不太建议使用)
+gitment_remote: false
+gitment_repo: ''          #存储评论的 repo name(需要在Github创建)
+gitment_oauth:
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
+
+# 4、Giteement----【国内用户建议使用这个，相对比较快】
+# 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
+# 基于码云的评论系统(https://gitee.com/zhousiwei/giteement)
+giteement:
+  enable: false  # 是否启用码云评论系统
+  # 是否使用官方js(false可以提升访问速度)
+  remote: false
+  redirect_uri: ''   # 应用回调地址(请和配置的第三方应用保持一致)
+  # 不能更改(网上开源项目`https://github.com/Rob--W/cors-anywhere`作者提供的专门用来跨域服务器的配置)
+  oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token
+  giteeID: ''  # 你的码云账号英文名
+  # 存储评论的 repo name(需要在码云仓库创建公开仓库)
+  repo: ''
+  gitment_oauth:
+    client_id: ''           #client ID
+    client_secret: ''       #client secret
+
+# 5、beaudar-表达 评论，由于giteement和gitment都不能使用了，所以使用beaudar
+# 插件配置地址 https://beaudar.lipk.org/
+beaudar:
+  enable: true
+  repo: ''       # 仓库名称 注意直接从GitHub上复制 / 左右可能有空格，注意删除
+  issue_term: 'pathname'                          # beaudar 生成的博客文章 ↔️ Issue 映射关系
+  label: 'comment'                                # issue 标签，选择将分配给 Beaudar 创建的问题的标签
+  theme: 'github-light'                           # beaudar 主题
+
+# 访问量统计功能(不蒜子)
+busuanzi:
+  enable: true
+  site_visit: true  # 站点访问量显示
+  article_visit: true  # 文章访问量显示
+
+# 音乐插件
+music:
+  enable: true        # 是否使用音乐插件
+  text: ''            # 提示文本(关闭请设置为false)
+  
+  cloudMusic:         # 网易云音乐插件
+    enable: false     # 使用网易云
+    # 播放器尺寸类型(1：长尺寸、2：短尺寸)
+    type: 2
+    id: 30245064  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul 30245064再次，四月是你的谎言 33785991 badApple 八音盒版
+    autoPlay: false  # 是否开启自动播放
+
+  # aplayer 音乐插件，https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+  # 确保安装了 npm install --save hexo-tag-aplayer，并且在hexo的配置文件_config.yml文件中添加以下两行
+  # aplayer:
+  #   meting: true
+  # 如果想在文章中使用 在文章对应位置添加 以下代码即可
+  # {% meting "60198" "netease" "playlist" "autoplay" "mutex:false" "listmaxheight:340px" "preload:none" "theme:#ad7a86" ... %}
+  aplayer:                # aplayer 音乐插件
+    enable: true          # 使用aplayer
+    id: '7786619105'                # 必须值 歌曲 id / 播放列表 id / 相册 id / 搜索关键字
+    server: 'tencent'	          # 必须值 音乐平台: netease, tencent, kugou, xiami, baidu
+    type: 'playlist'	            # 必须值 song, playlist, album, search, artist
+    fixed: true	          # false 开启固定模式 true 开启吸底模式
+    loop: none	          # 列表循环模式：all, one,none
+    order: random	        # 列表播放模式： list, random
+    volume: 0.4	          # 播放器音量
+    listfolded: true	    # 指定音乐播放列表是否折叠
+    autoplay: false	      # 自动播放，移动端浏览器暂时不支持此功能
+    mutex: true	          # 该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停
+    listmaxheight: 400px	# 播放列表的最大长度
+    preload: none	        # 音乐文件预载入模式，可选项： none, metadata, auto
+    theme: #00b9f1	      # 播放器风格色彩设置
+
+# 页面点击小红心
+clickLove:
+  # (关闭请设置为false)
+  enable: true
+
+# GitHub Ribbons(https://github.blog/2008-12-19-github-ribbons/)
+github:
+  # (关闭请设置为false)
+  url: https://github.com/JoeyBling/hexo-theme-yilia-plus
+
+# 页脚 Litten(此配置项已弃用)
+# 帮助我们让更多人可以更方便使用Hexo，请尽量不要修改此主题配置
+pageFooter:
+  litten: GitHub:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">hexo-theme-yilia-plus</a>
+
+# 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
+baidu_push: false
+
+# 版权声明
+# 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
+copyright_type: 2
+# 版权声明自定义文本(关闭请设置为false)
+copyright_text: 
+
+# 网站成立年份(默认为 2018，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
+since: 2018
+
+# Progress Bar | 页面加载进度条
+# Demo: http://github.hubspot.com/pace/docs/welcome/
+# type: barber-shop|big-counter|bounce|center-atom|center-circle|
+#       center-radar|center-simple|corner-indicator|flash|flat-top|
+#       loading-bar|mac-osx|minimal
+# color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
+progressBar:
+  enable: false
+  type: 'minimal'  # Keep Quotes | 保留引号避免出错(某些type会导致样式重叠排版错误)
+  color: blue
+
+# Apple Touch icon 苹果图标(关闭请设置为false)
+apple_touch_icon: '/apple-touch-icon-180x180.png'
+
+# Tab Title Change | 标签页标题切换
+tab_title_change:
+  enable: true
+  left_tab_title: '(つェ⊂) 我藏好了哦~ '
+  return_tab_title: '(*´∇｀*) 被你发现啦~ '
+
+# https://github.com/willin/hexo-wordcount
+# 是否开启字数统计(关闭请设置enable为false)
+# 也可以单独在md文件里Front-matter设置`no_word_count: true`属性，来自定义关闭字数统计
+word_count:
+  enable: true
+  # 只在文章详情显示(不在首页显示)
+  only_article_visit: true
+
+# 文字输入特效
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: true
+  # 使输入模式丰富多彩
+  colorful: true
+  # 是否开启摇动
+  shake: false
+
+# 飘雪特效
+# https://github.com/MlgmXyysd/snow.js
+snow:
+  enable: true
+  type: 1     # 1 小雪花 2 大雪花
+
+# https://github.com/hustcc/canvas-nest.js
+# 配置详见： https://github.com/hustcc/canvas-nest.js#configuration
+# 动态线条效果，会向鼠标集中
+canvas_nest:
+  enable: true
+  color: '28,28,28'            # 线条颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  pointColor: '26,1,57'        # 点的颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  opacity: '0.5'               # 线条不透明度 (0~1), default: 0.5.  1不透明
+  count: '99'                  # 线条数量, default: 99.
+  zIndex: '-1'                 # z-index 背景属性, default: -1.
+
+
+# 看板娘动态模型插件
+## https://github.com/JoeyBling/live2d-widget.js
+live2d:
+  # (关闭请设置为false)
+  enable: false
+  # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
+  model: hibiki
+  display:
+    position: right # 显示位置：left/right(default: 'right')
+    width: 145  # 模型的长度(default: 150)
+    height: 315 # 模型的高度(default: 300)
+    hOffset: 50 # 水平偏移(default: 0)
+    #vOffset: -20 # 垂直偏移(default: -20)
+  mobile:
+    show: false # 是否在移动设备上显示(default: true)
+    scale: 0.6 # 移动设备上的缩放(default: 0.5)
+  react:
+    opacity: 0.8 # 模型透明度(default: 0.7)
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  # header: '#D3D1DC'
+  header: '#4d4d4d'
+  gif:
+    # 是否启用左侧边栏动态图效果
+    enable: false
+    # 自定义背景图路径(默认可以不设置，提供默认背景图)
+    # path: /img/biubiubiu.gif
+  # 右滑板块背景
+  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: true
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  innerArchive: '所有文章'
+  friends: '友链'
+  aboutme: '关于我'
+
+# 友情链接
+friends:
+  技术笔记:  #网站名称
+    #网站地址
+    url: https://zhousiwei.gitee.io/ibooks/
+    #网站图片(可忽略不写)
+    img: https://zhousiwei.gitee.io/ibooks/favicon.ico
+    #网站简介(可忽略不写)
+    description: 记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析
+  GitHub:
+    url: https://github.com/JoeyBling
+  码云:
+    url: https://gitee.com/zhousiwei
+  简书:
+    url: https://www.jianshu.com/u/02cbf31a043a
+  CSDN:
+    url: https://blog.csdn.net/qq_30930805
+
+# 关于我
+aboutme: 主要涉及技术：<br>Java后端开发、聚合支付、<br>公众号开发、开源爱好者、Linux<br><br>联系QQ:2434387555<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+
+```
+
+### 2. 自己进行配置
+
+首先在`yilia-plus/layout/_partial/article.ejs`文件最后追加以下代码
+
+```ejs
+<!-- beaudar评论插件 -->
+<% if (theme.beaudar){ %>
+  <%- partial('post/beaudar', { 
+      key: post.slug, 
+      title: post.title, 
+      url: config.url+url_for(post.path) 
+    }) %>
+<% } %>
+```
+
+然后新建`yilia-plus/layout/_partial/post/beaudar.ejs`文件，写入以下内容
+
+```ejs
+<% if (!index && post.comments && theme.beaudar && theme.beaudar.enable){ %>
+	<div id="beaudar-comment">
+		<link rel="stylesheet" href="<%- url_for('lib/beaudar.css') %>"> <!--这里是我自己的css文件，如果你没有弄的话，可以不写。-->
+		<script src="https://beaudar.lipk.org/client.js" 
+				repo="<%=theme.beaudar.repo%>" 
+				issue-term="<%=theme.beaudar.issue_term%>"
+				label="<%=theme.beaudar.label%>"
+				theme="<%=theme.beaudar.theme%>"
+				crossorigin="anonymous" async>
+			</script>
+	</div>
+<% } %>
+```
+
+然后在`yilia-plus/_config.yml`文件中，添加以下配置即可
+
+```yaml
+# 5、beaudar-表达 评论，由于giteement和gitment都不能使用了，所以使用beaudar
+# 插件配置地址 https://beaudar.lipk.org/
+beaudar:
+  enable: true
+  repo: ''       # 仓库名称 注意直接从GitHub上复制 / 左右可能有空格，注意删除
+  issue_term: 'pathname'                          # beaudar 生成的博客文章 ↔️ Issue 映射关系
+  label: 'comment'                                # issue 标签，选择将分配给 Beaudar 创建的问题的标签
+  theme: 'github-light'                           # beaudar 主题
+```
+
+## 三、 一些问题
+
+1. 由于`Beaudar`提供的评论框主题和`yilia-plus`的风格不符，所以需要自定义下`Beaudar`的样式，详细的样式配置可以去看[Beaudar - 表达 (lipk.org)](https://beaudar.lipk.org/)网站上的说明，这里给出我自己简单的配置，只是简单将评论框拉宽到和文章页面等宽，因为我觉得`Beaudar`自带的主题`github-light`风格还行。
+
+   新建`yilia-plus/source/lib/beaudar.css`文件，添加以下代码。
+
+   ```css
+   #beaudar-comment {padding: 0 30px!important;min-width: 20px;}.beaudar{max-width: none;}
+   ```
+
+2. 评论报错，显示 缺少 “beaudar.json” 配置 或 不允许 xxx 发布到 xxx/xxx
+
+   作者有说详细的解决办法[执手对影成双 - 关于 Beaudar 的 Q&A (lipk.org)](https://www.lipk.org/blog/2020/06/08/beauder-qa/#q缺少-beaudarjson-配置-或-不允许-xxx-发布到-xxxxxx)。方式就是你需要新建`beaudar.json`文件，并且这个文件生成在在`hexo`生成的`public`文件夹下，我是放在了`yilia-plus/source/beaudar.json`下，这样`hexo`编译的时候就会将这个文件放在`public`文件夹下了。该文件写入的内容如下
+
+   ```json
+   {
+   	"origins": [
+           "这里写入你博客的地址，多个地址用逗号分隔"
+   	]
+   }
+   ```
+
+   
+
+
+

@@ -1,0 +1,346 @@
+﻿# Header-菜单
+menu:
+  # 主页: /
+  个人简历: https://proudrabbit.gitee.io/resume
+  Love Story: https://proudrabbit.gitee.io/love_story
+  嵌入式: /tags/嵌入式/
+  Linux系统: /tags/Linux/
+  编程语言: /tags/编程语言/
+  软件使用: /tags/软件使用/
+  随笔: /tags/随笔/
+  归档: /archives/index.html
+
+
+# subNav-子导航
+subNav:
+  github: "https://github.com/ProudRabbit"
+  gitee: "https://gitee.com/proudrabbit" # 码云
+  csdn: "https://blog.csdn.net/qq_37284607"
+  bilibili: "https://space.bilibili.com/15573126"
+  qq: "img/qrcode.png"
+  #cnblog: "#"
+  #blog: "#"
+  #jianshu: "#" #简书
+  #rss: "#"
+  #zhihu: "#"
+  #weixin: "img/wxcode.png"
+  #weibo: "#"
+  #douban: "#"
+  #segmentfault: "#"
+  #acfun: "#"
+  mail: "mailto:yuh_feng@163.com"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+# 悬停预览图片效果
+hover_effect:
+  ## `global` 0: Set separately, 1: Enable global 2: Close global
+  ## `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
+  global: 1
+  # SubNav-导航
+  subNav: true
+
+# RSS订阅(关于如何配置启用:https://www.jianshu.com/p/2aaac7a19736)
+rss: /atom.xml
+
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 / 设为 /blog/。
+# 新版本已弃用，请在博客根目录文件进行配置
+# root: /
+
+# Content
+
+# 文章太长，截断按钮文字(在需要截断的行增加此标记：<!--more-->)
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+# 数学公式
+mathjax: false
+
+# Open link in a new tab | 是否在新窗口打开链接
+open_in_new:
+  article: true   # 文章链接
+  menu: true      # 导航菜单
+  subNav: true    # 子菜单
+
+# 打赏
+# 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 0
+# 打赏wording
+reward_wording: '谢谢你请我吃胡萝卜(｡･ω･｡)ﾉ♡'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+alipay: /img/alipay.jpg
+# 微信二维码图片地址
+weixin: /img/weixin.png
+
+# 目录
+# 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
+toc: 2
+# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
+toc_hide_index: true
+# 目录为空时的提示
+toc_empty_wording: '目录，那是什么东西 ◔‸◔？'
+
+# 是否有快速回到顶部的按钮
+top: true
+
+# Miscellaneous
+# 百度统计
+baidu_analytics: ''
+google_analytics: ''
+
+# 网站图标
+favicon: /img/favicon.ico
+
+# 你的头像url
+avatar: /img/head2.jpg
+
+# 是否开启分享
+share_jia: true
+
+# 评论：1、畅言；2、Disqus；3、Gitment；4、Giteement；5、beaudar评论
+# 不需要使用某项，直接设置值为false，或注释掉
+# 具体请参考wiki：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki
+
+# 1、畅言
+changyan_appid: false
+changyan_conf: false
+
+# 2、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia-plus的
+disqus: false
+
+# 3、Gitment----基于GitHub的评论系统(关闭请设置gitment_owner为false)
+# 关于如何集成:https://www.jianshu.com/p/ac7658cc912f
+gitment_owner: false      #你的 GitHub ID
+# 是否使用官方js(false可以提升访问速度，本地修改过一部分的js，官方js可能会出现服务器不稳定，不太建议使用)
+gitment_remote: false
+gitment_repo:           #存储评论的 repo name(需要在Github创建)
+gitment_oauth:
+  client_id:                                #client ID
+  client_secret:        #client secret
+
+# 4、Giteement----【国内用户建议使用这个，相对比较快】
+# 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
+# 基于码云的评论系统(https://gitee.com/zhousiwei/giteement)
+giteement:
+  enable: false  # 是否启用码云评论系统
+  # 是否使用官方js(false可以提升访问速度)
+  remote: false
+  redirect_uri: 'https://proudrabbit.gitee.io/'   # 应用回调地址(请和配置的第三方应用保持一致)
+  # 不能更改(网上开源项目`https://github.com/Rob--W/cors-anywhere`作者提供的专门用来跨域服务器的配置)
+  oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token
+  giteeID: ''  # 你的码云账号英文名
+  # 存储评论的 repo name(需要在码云仓库创建公开仓库)
+  repo: ''
+  gitment_oauth:
+    client_id: ''           #client ID
+    client_secret: ''       #client secret
+
+# 5、beaudar评论，由于giteement和gitment都不能使用了，所以使用beaudar
+# 插件配置地址 https://beaudar.lipk.org/
+beaudar:
+  enable: true
+  repo: 'ProudRabbit/ProudRabbit.github.io'       # 仓库名称
+  issue_term: 'title'                             # beaudar 生成的博客文章 ↔️ Issue 映射关系
+  label: 'comment'                                # issue 标签，选择将分配给 Beaudar 创建的问题的标签
+  theme: 'github-light'                           # beaudar 主题
+
+# 访问量统计功能(不蒜子)
+busuanzi:
+  enable: true
+  site_visit: true  # 站点访问量显示
+  article_visit: true  # 文章访问量显示
+
+# 音乐插件
+music:
+  enable: true        # 是否使用音乐插件
+  # 提示文本(关闭请设置为false)
+  text: '听首音乐放松一下吧o(*￣▽￣*)o'
+
+  cloudMusic:         # 网易云音乐插件
+    enable: false     # 使用网易云
+    # 播放器尺寸类型(1：长尺寸、2：短尺寸)
+    type: 2
+    id: 30245064  # 网易云分享的音乐ID(更换音乐请更改此配置项) 572578819 奏之曲 5308028 My Soul 30245064再次，四月是你的谎言 33785991 badApple 八音盒版
+    autoPlay: false  # 是否开启自动播放
+
+  # aplayer 音乐插件，https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+  # 确保安装了 npm install --save hexo-tag-aplayer，并且在hexo的配置文件_config.yml文件中添加以下两行
+  # aplayer:
+  #   meting: true
+  # 如果想在文章中使用 在文章对应位置添加 以下代码即可
+  # {% meting "60198" "netease" "playlist" "autoplay" "mutex:false" "listmaxheight:340px" "preload:none" "theme:#ad7a86" ... %}
+  aplayer:                # aplayer 音乐插件
+    enable: true          # 使用aplayer
+    id: '8271608824'                # 必须值 歌曲 id / 播放列表 id / 相册 id / 搜索关键字
+    server: 'tencent'	          # 必须值 音乐平台: netease, tencent, kugou, xiami, baidu
+    type: 'playlist'	            # 必须值 song, playlist, album, search, artist
+    fixed: true	          # false 开启固定模式 true 开启吸底模式
+    loop: none	          # 列表循环模式：all, one,none
+    order: random	        # 列表播放模式： list, random
+    volume: 0.4	          # 播放器音量
+    listfolded: true	    # 指定音乐播放列表是否折叠
+    autoplay: false	      # 自动播放，移动端浏览器暂时不支持此功能
+    mutex: true	          # 该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停
+    listmaxheight: 400px	# 播放列表的最大长度
+    preload: none	        # 音乐文件预载入模式，可选项： none, metadata, auto
+    theme: #00b9f1	      # 播放器风格色彩设置
+
+# 页面点击小红心
+clickLove:
+  # (关闭请设置为false)
+  enable: true
+
+# GitHub Ribbons(https://github.blog/2008-12-19-github-ribbons/)
+github:
+  # (关闭请设置为false)
+  url: https://github.com/ProudRabbit
+
+# 页脚 Litten(此配置项已弃用)
+# 帮助我们让更多人可以更方便使用Hexo，请尽量不要修改此主题配置
+pageFooter:
+  littenHexo: 由<a href="https://hexo.io/" target="_blank">Hexo</a>强力驱动
+  littenTheme: 主题:<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">yilia-plus</a>
+  littenComment: 评论插件:<a href="https://beaudar.lipk.org" target="_blank">Beaudar(表达)</a>
+
+# 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
+baidu_push: true
+
+# 版权声明
+# 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
+copyright_type: 2
+# 版权声明自定义文本(关闭请设置为false)
+copyright_text:
+
+# 网站成立年份(默认为 2018，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
+since: 2020
+
+# Progress Bar | 页面加载进度条
+# Demo: http://github.hubspot.com/pace/docs/welcome/
+# type: barber-shop|big-counter|bounce|center-atom|center-circle|
+#       center-radar|center-simple|corner-indicator|flash|flat-top|
+#       loading-bar|mac-osx|minimal
+# color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
+progressBar:
+  enable: true
+  type: 'corner-indicator'  # Keep Quotes | 保留引号避免出错(某些type会导致样式重叠排版错误) corner-indicator loading-bar
+  color: silver             # black
+
+# Apple Touch icon 苹果图标(关闭请设置为false)
+apple_touch_icon: '/apple-touch-icon-180x180.png'
+
+# Tab Title Change | 标签页标题切换
+tab_title_change:
+  enable: false
+  left_tab_title: '(つェ⊂) 我藏好了哦~ '
+  return_tab_title: '(*´∇｀*) 被你发现啦~ '
+
+# https://github.com/willin/hexo-wordcount
+# 是否开启字数统计(关闭请设置enable为false)
+# 也可以单独在md文件里Front-matter设置`no_word_count: true`属性，来自定义关闭字数统计
+word_count:
+  enable: true
+  # 只在文章详情显示(不在首页显示)
+  only_article_visit: true
+
+# 文字输入特效
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: true
+  # 使输入模式丰富多彩
+  colorful: true
+  # 是否开启摇动
+  shake: false
+
+# 飘雪特效
+# https://github.com/MlgmXyysd/snow.js
+snow:
+  enable: false
+  type: 1     # 1 小雪花 2 大雪花
+
+# https://github.com/hustcc/canvas-nest.js
+# 配置详见： https://github.com/hustcc/canvas-nest.js#configuration
+# 动态线条效果，会向鼠标集中
+canvas_nest:
+  enable: false
+  color: '28,28,28'            # 线条颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  pointColor: '26,1,57'        # 点的颜色, default: '0,0,0'; RGB values: (R,G,B).(note: 使用 ',' 分开.)
+  opacity: '0.5'               # 线条不透明度 (0~1), default: 0.5.  1不透明
+  count: '99'                  # 线条数量, default: 99.
+  zIndex: '-1'                 # z-index 背景属性, default: -1.
+
+
+# 看板娘动态模型插件
+## https://github.com/JoeyBling/live2d-widget.js
+live2d:
+  # (关闭请设置为false)
+  enable: true
+  # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
+  model: hijiki     # 喜欢的几个模型 hijiki haru/01 haru/02
+  display:
+    position: right # 显示位置：left/right(default: 'right')
+    width: 150  # 模型的长度(default: 150)
+    height: 300 # 模型的高度(default: 300)
+    hOffset: 10 # 水平偏移(default: 0)  haru/01 50  hijiki 50
+    vOffset: 400 # 垂直偏移(default: 0)   haru/01 1   hijiki 0
+  mobile:
+    show: false # 是否在移动设备上显示(default: true)
+    scale: 0.6 # 移动设备上的缩放(default: 0.5)
+  react:
+    opacity: 0.7 # 模型透明度(default: 0.7)
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  # header: '#D3D1DC' '#4d4d4d'
+  header: 'rgba(77, 77, 77, 0.7)'
+  gif:
+    # 是否启用左侧边栏动态图效果
+    enable: false
+    # 自定义背景图路径(默认可以不设置，提供默认背景图)
+    path: /img/biubiubiu.gif
+  # 右滑板块背景
+  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: true
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  innerArchive: '所有文章'
+  friends: '友情链接'
+  aboutme: '关于我'
+
+# 友情链接
+friends:
+  # 技术笔记: 网站名称
+    # url: 网站地址
+    # img: 网站图片(可忽略不写)
+    # description: 网站简介(可忽略不写)
+  正月点灯笼的博客:
+    url: https://blog.csdn.net/qq_37000789
+    description: 个人博客
+  哈哈哈的嘎嘎嘎的博客:
+    url: https://blog.csdn.net/ld1461575230?spm=1001.2101.3001.5343&type=blog
+    description: 个人博客
+  摸鱼的小灰栗的博客:
+    url: https://gujiakai.gitee.io/
+    description: 个人博客
+  # 码云:
+    # url: https://gitee.com/ProudRabbit
+  # 简书:
+    #url: https://www.jianshu.com/u/02cbf31a043a
+  # CSDN:
+    # url: https://blog.csdn.net/qq_37284607
+
+# 关于我
+aboutme: 熟悉的技术：<br>C/C++、Python、嵌入式、ROS。<br>开源爱好者、Linux爱好者。<br>欢迎访问我的博客。hi✿(。◕ᴗ◕。)✿
